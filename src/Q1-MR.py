@@ -1,6 +1,5 @@
 from __future__ import print_function
 from pyspark import SparkContext
-from pyspark.streaming import StreamingContext
 import sys
 import datetime
 
@@ -23,6 +22,9 @@ def reducer (a, b) :
 def mapper2 (line) :
     return ("" + line[0] + "\t\t" + str(line[1][0]/line[1][1]))
 
+def myprint (line) :
+    print (line)
+
 if __name__ == "__main__":
     sc = SparkContext(appName="Q1-MR")
 
@@ -30,6 +32,7 @@ if __name__ == "__main__":
     text_file = sc.textFile("hdfs://master:9000/yellow_tripdata_1m.csv")
     mean_times = text_file.map(mapper).reduceByKey(reducer).sortByKey().map(mapper2)
     final_rdd = final_rdd.union(mean_times)
-    print("Saving to file Q1-MR-out.txt\n")
 
-    final_rdd.saveAsTextFile("hdfs://master:9000/Q1-MR-out.txt")
+    final_rdd.saveAsTextFile("hdfs://master:9000/Q1-MR-out")
+    for x in final_rdd.collect() :
+        print (x)
