@@ -1,0 +1,401 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/home/user/spark-2.4.4-bin-hadoop2.7/conf/:/home/user/spark-2.4.4-bin-hadoop2.7/jars/*" "-Xmx512M" "-Dspark.driver.port=41803" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@master:41803" "--executor-id" "1" "--hostname" "192.168.0.2" "--cores" "1" "--app-id" "app-20200120173211-0209" "--worker-url" "spark://Worker@192.168.0.2:40744"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/01/20 17:32:13 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 7300@slave
+20/01/20 17:32:13 INFO SignalUtils: Registered signal handler for TERM
+20/01/20 17:32:13 INFO SignalUtils: Registered signal handler for HUP
+20/01/20 17:32:13 INFO SignalUtils: Registered signal handler for INT
+20/01/20 17:32:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/01/20 17:32:14 INFO SecurityManager: Changing view acls to: user
+20/01/20 17:32:14 INFO SecurityManager: Changing modify acls to: user
+20/01/20 17:32:14 INFO SecurityManager: Changing view acls groups to: 
+20/01/20 17:32:14 INFO SecurityManager: Changing modify acls groups to: 
+20/01/20 17:32:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/20 17:32:15 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:41803 after 114 ms (0 ms spent in bootstraps)
+20/01/20 17:32:15 INFO SecurityManager: Changing view acls to: user
+20/01/20 17:32:15 INFO SecurityManager: Changing modify acls to: user
+20/01/20 17:32:15 INFO SecurityManager: Changing view acls groups to: 
+20/01/20 17:32:15 INFO SecurityManager: Changing modify acls groups to: 
+20/01/20 17:32:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/20 17:32:15 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:41803 after 8 ms (0 ms spent in bootstraps)
+20/01/20 17:32:15 INFO DiskBlockManager: Created local directory at /tmp/spark-12bcaa52-12d9-4941-bfdf-a1a21898a959/executor-a5b428ce-efe1-4299-8671-3f5facfa4c05/blockmgr-a4a394e1-c026-46fa-9210-e674b6d66d7b
+20/01/20 17:32:15 INFO MemoryStore: MemoryStore started with capacity 93.3 MB
+20/01/20 17:32:15 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master:41803
+20/01/20 17:32:15 INFO WorkerWatcher: Connecting to worker spark://Worker@192.168.0.2:40744
+20/01/20 17:32:15 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:40744 after 20 ms (0 ms spent in bootstraps)
+20/01/20 17:32:15 INFO WorkerWatcher: Successfully connected to spark://Worker@192.168.0.2:40744
+20/01/20 17:32:16 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/01/20 17:32:16 INFO Executor: Starting executor ID 1 on host 192.168.0.2
+20/01/20 17:32:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39445.
+20/01/20 17:32:16 INFO NettyBlockTransferService: Server created on 192.168.0.2:39445
+20/01/20 17:32:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/01/20 17:32:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(1, 192.168.0.2, 39445, None)
+20/01/20 17:32:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(1, 192.168.0.2, 39445, None)
+20/01/20 17:32:16 INFO BlockManager: Initialized BlockManager: BlockManagerId(1, 192.168.0.2, 39445, None)
+20/01/20 17:32:16 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/01/20 17:32:16 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/01/20 17:32:16 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/01/20 17:32:17 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:34781 after 11 ms (0 ms spent in bootstraps)
+20/01/20 17:32:17 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.1 KB, free 93.3 MB)
+20/01/20 17:32:17 INFO TorrentBroadcast: Reading broadcast variable 1 took 309 ms
+20/01/20 17:32:17 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 9.9 KB, free 93.3 MB)
+20/01/20 17:32:17 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:0+67108864
+20/01/20 17:32:17 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/01/20 17:32:17 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.0 KB, free 93.3 MB)
+20/01/20 17:32:17 INFO TorrentBroadcast: Reading broadcast variable 0 took 23 ms
+20/01/20 17:32:17 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 320.9 KB, free 92.9 MB)
+20/01/20 17:32:48 INFO PythonRunner: Times: total = 29211, boot = 1208, init = 227, finish = 27776
+20/01/20 17:32:48 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1550 bytes result sent to driver
+20/01/20 17:32:48 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/01/20 17:32:48 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/01/20 17:32:48 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:201326592+67108864
+20/01/20 17:33:12 INFO PythonRunner: Times: total = 24365, boot = -113, init = 132, finish = 24346
+20/01/20 17:33:12 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1550 bytes result sent to driver
+20/01/20 17:33:12 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+20/01/20 17:33:12 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+20/01/20 17:33:13 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:335544320+67108864
+20/01/20 17:33:36 INFO PythonRunner: Times: total = 23756, boot = -40, init = 48, finish = 23748
+20/01/20 17:33:36 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1550 bytes result sent to driver
+20/01/20 17:33:36 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+20/01/20 17:33:36 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+20/01/20 17:33:36 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:402653184+67108864
+20/01/20 17:34:01 INFO PythonRunner: Times: total = 24889, boot = -30, init = 33, finish = 24886
+20/01/20 17:34:01 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 1550 bytes result sent to driver
+20/01/20 17:34:01 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+20/01/20 17:34:01 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+20/01/20 17:34:01 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:536870912+67108864
+20/01/20 17:34:28 INFO PythonRunner: Times: total = 26299, boot = -40, init = 43, finish = 26296
+20/01/20 17:34:28 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 1550 bytes result sent to driver
+20/01/20 17:34:28 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+20/01/20 17:34:28 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+20/01/20 17:34:28 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:671088640+67108864
+20/01/20 17:35:02 INFO PythonRunner: Times: total = 34868, boot = -39, init = 47, finish = 34860
+20/01/20 17:35:02 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 1550 bytes result sent to driver
+20/01/20 17:35:02 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/01/20 17:35:02 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+20/01/20 17:35:02 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:805306368+67108864
+20/01/20 17:35:31 INFO PythonRunner: Times: total = 28708, boot = -51, init = 59, finish = 28700
+20/01/20 17:35:31 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 1550 bytes result sent to driver
+20/01/20 17:35:31 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/01/20 17:35:31 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+20/01/20 17:35:31 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:939524096+67108864
+20/01/20 17:36:15 INFO PythonRunner: Times: total = 44042, boot = -183, init = 185, finish = 44040
+20/01/20 17:36:15 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 1550 bytes result sent to driver
+20/01/20 17:36:15 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+20/01/20 17:36:15 INFO Executor: Running task 16.0 in stage 0.0 (TID 16)
+20/01/20 17:36:15 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1073741824+67108864
+20/01/20 17:36:56 INFO PythonRunner: Times: total = 40859, boot = -32, init = 39, finish = 40852
+20/01/20 17:36:56 INFO Executor: Finished task 16.0 in stage 0.0 (TID 16). 1550 bytes result sent to driver
+20/01/20 17:36:56 INFO CoarseGrainedExecutorBackend: Got assigned task 18
+20/01/20 17:36:56 INFO Executor: Running task 18.0 in stage 0.0 (TID 18)
+20/01/20 17:36:56 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1207959552+67108864
+20/01/20 17:37:40 INFO PythonRunner: Times: total = 43251, boot = -55, init = 73, finish = 43233
+20/01/20 17:37:40 INFO Executor: Finished task 18.0 in stage 0.0 (TID 18). 1550 bytes result sent to driver
+20/01/20 17:37:40 INFO CoarseGrainedExecutorBackend: Got assigned task 20
+20/01/20 17:37:40 INFO Executor: Running task 20.0 in stage 0.0 (TID 20)
+20/01/20 17:37:40 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1342177280+67108864
+20/01/20 17:38:21 INFO PythonRunner: Times: total = 41467, boot = -23, init = 29, finish = 41461
+20/01/20 17:38:21 INFO Executor: Finished task 20.0 in stage 0.0 (TID 20). 1550 bytes result sent to driver
+20/01/20 17:38:21 INFO CoarseGrainedExecutorBackend: Got assigned task 22
+20/01/20 17:38:21 INFO Executor: Running task 22.0 in stage 0.0 (TID 22)
+20/01/20 17:38:21 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1476395008+67108864
+20/01/20 17:39:03 INFO PythonRunner: Times: total = 41774, boot = -22, init = 32, finish = 41764
+20/01/20 17:39:03 INFO Executor: Finished task 22.0 in stage 0.0 (TID 22). 1550 bytes result sent to driver
+20/01/20 17:39:03 INFO CoarseGrainedExecutorBackend: Got assigned task 24
+20/01/20 17:39:03 INFO Executor: Running task 24.0 in stage 0.0 (TID 24)
+20/01/20 17:39:03 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1610612736+67108864
+20/01/20 17:39:45 INFO PythonRunner: Times: total = 42052, boot = -15, init = 23, finish = 42044
+20/01/20 17:39:45 INFO Executor: Finished task 24.0 in stage 0.0 (TID 24). 1593 bytes result sent to driver
+20/01/20 17:39:45 INFO CoarseGrainedExecutorBackend: Got assigned task 26
+20/01/20 17:39:45 INFO Executor: Running task 26.0 in stage 0.0 (TID 26)
+20/01/20 17:39:45 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1744830464+42673137
+20/01/20 17:40:09 INFO PythonRunner: Times: total = 24235, boot = -24, init = 31, finish = 24228
+20/01/20 17:40:09 INFO Executor: Finished task 26.0 in stage 0.0 (TID 26). 1550 bytes result sent to driver
+20/01/20 17:40:09 INFO CoarseGrainedExecutorBackend: Got assigned task 28
+20/01/20 17:40:09 INFO Executor: Running task 1.0 in stage 1.0 (TID 28)
+20/01/20 17:40:09 INFO TorrentBroadcast: Started reading broadcast variable 2
+20/01/20 17:40:09 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.7 KB, free 92.9 MB)
+20/01/20 17:40:09 INFO TorrentBroadcast: Reading broadcast variable 2 took 25 ms
+20/01/20 17:40:09 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 9.1 KB, free 92.9 MB)
+20/01/20 17:40:09 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:67108864+67108864
+20/01/20 17:40:36 INFO PythonRunner: Times: total = 26904, boot = -181, init = 206, finish = 26879
+20/01/20 17:40:36 INFO Executor: Finished task 1.0 in stage 1.0 (TID 28). 1680 bytes result sent to driver
+20/01/20 17:40:36 INFO CoarseGrainedExecutorBackend: Got assigned task 30
+20/01/20 17:40:36 INFO Executor: Running task 3.0 in stage 1.0 (TID 30)
+20/01/20 17:40:36 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:201326592+67108864
+20/01/20 17:41:01 INFO PythonRunner: Times: total = 24117, boot = -15, init = 27, finish = 24105
+20/01/20 17:41:01 INFO Executor: Finished task 3.0 in stage 1.0 (TID 30). 1766 bytes result sent to driver
+20/01/20 17:41:01 INFO CoarseGrainedExecutorBackend: Got assigned task 32
+20/01/20 17:41:01 INFO Executor: Running task 5.0 in stage 1.0 (TID 32)
+20/01/20 17:41:01 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:335544320+67108864
+20/01/20 17:41:24 INFO PythonRunner: Times: total = 23883, boot = -11, init = 17, finish = 23877
+20/01/20 17:41:24 INFO Executor: Finished task 5.0 in stage 1.0 (TID 32). 1616 bytes result sent to driver
+20/01/20 17:41:24 INFO CoarseGrainedExecutorBackend: Got assigned task 33
+20/01/20 17:41:24 INFO Executor: Running task 6.0 in stage 1.0 (TID 33)
+20/01/20 17:41:24 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:402653184+67108864
+20/01/20 17:41:54 INFO PythonRunner: Times: total = 29152, boot = -23, init = 30, finish = 29145
+20/01/20 17:41:54 INFO Executor: Finished task 6.0 in stage 1.0 (TID 33). 1644 bytes result sent to driver
+20/01/20 17:41:54 INFO CoarseGrainedExecutorBackend: Got assigned task 36
+20/01/20 17:41:54 INFO Executor: Running task 9.0 in stage 1.0 (TID 36)
+20/01/20 17:41:54 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:603979776+67108864
+20/01/20 17:42:28 INFO PythonRunner: Times: total = 34780, boot = -11, init = 18, finish = 34773
+20/01/20 17:42:28 INFO Executor: Finished task 9.0 in stage 1.0 (TID 36). 1809 bytes result sent to driver
+20/01/20 17:42:28 INFO CoarseGrainedExecutorBackend: Got assigned task 38
+20/01/20 17:42:28 INFO Executor: Running task 11.0 in stage 1.0 (TID 38)
+20/01/20 17:42:28 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:738197504+67108864
+20/01/20 17:43:06 INFO PythonRunner: Times: total = 37169, boot = -31, init = 51, finish = 37149
+20/01/20 17:43:06 INFO Executor: Finished task 11.0 in stage 1.0 (TID 38). 1773 bytes result sent to driver
+20/01/20 17:43:06 INFO CoarseGrainedExecutorBackend: Got assigned task 40
+20/01/20 17:43:06 INFO Executor: Running task 13.0 in stage 1.0 (TID 40)
+20/01/20 17:43:06 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:872415232+67108864
+20/01/20 17:43:39 INFO PythonRunner: Times: total = 33124, boot = -16, init = 23, finish = 33117
+20/01/20 17:43:39 INFO Executor: Finished task 13.0 in stage 1.0 (TID 40). 1763 bytes result sent to driver
+20/01/20 17:43:39 INFO CoarseGrainedExecutorBackend: Got assigned task 42
+20/01/20 17:43:39 INFO Executor: Running task 15.0 in stage 1.0 (TID 42)
+20/01/20 17:43:39 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1006632960+67108864
+20/01/20 17:44:17 INFO PythonRunner: Times: total = 38055, boot = -42, init = 49, finish = 38048
+20/01/20 17:44:17 INFO Executor: Finished task 15.0 in stage 1.0 (TID 42). 1836 bytes result sent to driver
+20/01/20 17:44:17 INFO CoarseGrainedExecutorBackend: Got assigned task 44
+20/01/20 17:44:17 INFO Executor: Running task 17.0 in stage 1.0 (TID 44)
+20/01/20 17:44:17 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1140850688+67108864
+20/01/20 17:44:58 INFO PythonRunner: Times: total = 40641, boot = -21, init = 24, finish = 40638
+20/01/20 17:44:58 INFO Executor: Finished task 17.0 in stage 1.0 (TID 44). 1935 bytes result sent to driver
+20/01/20 17:44:58 INFO CoarseGrainedExecutorBackend: Got assigned task 46
+20/01/20 17:44:58 INFO Executor: Running task 19.0 in stage 1.0 (TID 46)
+20/01/20 17:44:58 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1275068416+67108864
+20/01/20 17:45:34 INFO PythonRunner: Times: total = 36426, boot = -28, init = 39, finish = 36415
+20/01/20 17:45:34 INFO Executor: Finished task 19.0 in stage 1.0 (TID 46). 1836 bytes result sent to driver
+20/01/20 17:45:34 INFO CoarseGrainedExecutorBackend: Got assigned task 48
+20/01/20 17:45:34 INFO Executor: Running task 21.0 in stage 1.0 (TID 48)
+20/01/20 17:45:34 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1409286144+67108864
+20/01/20 17:46:09 INFO PythonRunner: Times: total = 35046, boot = -44, init = 49, finish = 35041
+20/01/20 17:46:09 INFO Executor: Finished task 21.0 in stage 1.0 (TID 48). 1809 bytes result sent to driver
+20/01/20 17:46:09 INFO CoarseGrainedExecutorBackend: Got assigned task 50
+20/01/20 17:46:09 INFO Executor: Running task 23.0 in stage 1.0 (TID 50)
+20/01/20 17:46:09 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1543503872+67108864
+20/01/20 17:46:46 INFO PythonRunner: Times: total = 36459, boot = -41, init = 48, finish = 36452
+20/01/20 17:46:46 INFO Executor: Finished task 23.0 in stage 1.0 (TID 50). 1818 bytes result sent to driver
+20/01/20 17:46:46 INFO CoarseGrainedExecutorBackend: Got assigned task 52
+20/01/20 17:46:46 INFO Executor: Running task 25.0 in stage 1.0 (TID 52)
+20/01/20 17:46:46 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1677721600+67108864
+20/01/20 17:47:26 INFO PythonRunner: Times: total = 40159, boot = -39, init = 56, finish = 40142
+20/01/20 17:47:26 INFO Executor: Finished task 25.0 in stage 1.0 (TID 52). 1890 bytes result sent to driver
+20/01/20 17:47:29 INFO CoarseGrainedExecutorBackend: Got assigned task 54
+20/01/20 17:47:29 INFO Executor: Running task 0.0 in stage 2.0 (TID 54)
+20/01/20 17:47:29 INFO TorrentBroadcast: Started reading broadcast variable 3
+20/01/20 17:47:29 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.3 KB, free 92.9 MB)
+20/01/20 17:47:29 INFO TorrentBroadcast: Reading broadcast variable 3 took 30 ms
+20/01/20 17:47:29 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 11.4 KB, free 92.9 MB)
+20/01/20 17:47:29 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:0+67108864
+20/01/20 17:47:52 INFO PythonRunner: Times: total = 23798, boot = -2728, init = 2761, finish = 23765
+20/01/20 17:47:52 INFO Executor: Finished task 0.0 in stage 2.0 (TID 54). 1781 bytes result sent to driver
+20/01/20 17:47:52 INFO CoarseGrainedExecutorBackend: Got assigned task 56
+20/01/20 17:47:52 INFO Executor: Running task 2.0 in stage 2.0 (TID 56)
+20/01/20 17:47:52 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:134217728+67108864
+20/01/20 17:48:19 INFO PythonRunner: Times: total = 26051, boot = -89, init = 94, finish = 26046
+20/01/20 17:48:19 INFO Executor: Finished task 2.0 in stage 2.0 (TID 56). 1738 bytes result sent to driver
+20/01/20 17:48:19 INFO CoarseGrainedExecutorBackend: Got assigned task 58
+20/01/20 17:48:19 INFO Executor: Running task 4.0 in stage 2.0 (TID 58)
+20/01/20 17:48:19 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:268435456+67108864
+20/01/20 17:48:46 INFO PythonRunner: Times: total = 26931, boot = -43, init = 45, finish = 26929
+20/01/20 17:48:46 INFO Executor: Finished task 4.0 in stage 2.0 (TID 58). 1738 bytes result sent to driver
+20/01/20 17:48:46 INFO CoarseGrainedExecutorBackend: Got assigned task 60
+20/01/20 17:48:46 INFO Executor: Running task 6.0 in stage 2.0 (TID 60)
+20/01/20 17:48:46 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:402653184+67108864
+20/01/20 17:49:11 INFO PythonRunner: Times: total = 25453, boot = -32, init = 35, finish = 25450
+20/01/20 17:49:11 INFO Executor: Finished task 6.0 in stage 2.0 (TID 60). 1738 bytes result sent to driver
+20/01/20 17:49:11 INFO CoarseGrainedExecutorBackend: Got assigned task 62
+20/01/20 17:49:11 INFO Executor: Running task 8.0 in stage 2.0 (TID 62)
+20/01/20 17:49:11 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:536870912+67108864
+20/01/20 17:49:39 INFO PythonRunner: Times: total = 27637, boot = -54, init = 55, finish = 27636
+20/01/20 17:49:39 INFO Executor: Finished task 8.0 in stage 2.0 (TID 62). 1738 bytes result sent to driver
+20/01/20 17:49:39 INFO CoarseGrainedExecutorBackend: Got assigned task 64
+20/01/20 17:49:39 INFO Executor: Running task 10.0 in stage 2.0 (TID 64)
+20/01/20 17:49:39 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:671088640+67108864
+20/01/20 17:50:14 INFO PythonRunner: Times: total = 35497, boot = -39, init = 41, finish = 35495
+20/01/20 17:50:14 INFO Executor: Finished task 10.0 in stage 2.0 (TID 64). 1738 bytes result sent to driver
+20/01/20 17:50:14 INFO CoarseGrainedExecutorBackend: Got assigned task 66
+20/01/20 17:50:14 INFO Executor: Running task 12.0 in stage 2.0 (TID 66)
+20/01/20 17:50:14 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:805306368+67108864
+20/01/20 17:50:43 INFO PythonRunner: Times: total = 28808, boot = -79, init = 81, finish = 28806
+20/01/20 17:50:43 INFO Executor: Finished task 12.0 in stage 2.0 (TID 66). 1738 bytes result sent to driver
+20/01/20 17:50:43 INFO CoarseGrainedExecutorBackend: Got assigned task 68
+20/01/20 17:50:43 INFO Executor: Running task 14.0 in stage 2.0 (TID 68)
+20/01/20 17:50:43 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:939524096+67108864
+20/01/20 17:51:24 INFO PythonRunner: Times: total = 40977, boot = -36, init = 38, finish = 40975
+20/01/20 17:51:24 INFO Executor: Finished task 14.0 in stage 2.0 (TID 68). 1738 bytes result sent to driver
+20/01/20 17:51:24 INFO CoarseGrainedExecutorBackend: Got assigned task 70
+20/01/20 17:51:24 INFO Executor: Running task 16.0 in stage 2.0 (TID 70)
+20/01/20 17:51:24 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1073741824+67108864
+20/01/20 17:52:03 INFO PythonRunner: Times: total = 38959, boot = -59, init = 66, finish = 38952
+20/01/20 17:52:03 INFO Executor: Finished task 16.0 in stage 2.0 (TID 70). 1738 bytes result sent to driver
+20/01/20 17:52:03 INFO CoarseGrainedExecutorBackend: Got assigned task 72
+20/01/20 17:52:03 INFO Executor: Running task 18.0 in stage 2.0 (TID 72)
+20/01/20 17:52:03 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1207959552+67108864
+20/01/20 17:52:45 INFO PythonRunner: Times: total = 41967, boot = -39, init = 41, finish = 41965
+20/01/20 17:52:45 INFO Executor: Finished task 18.0 in stage 2.0 (TID 72). 1738 bytes result sent to driver
+20/01/20 17:52:45 INFO CoarseGrainedExecutorBackend: Got assigned task 74
+20/01/20 17:52:45 INFO Executor: Running task 20.0 in stage 2.0 (TID 74)
+20/01/20 17:52:45 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1342177280+67108864
+20/01/20 17:53:28 INFO PythonRunner: Times: total = 42592, boot = -40, init = 42, finish = 42590
+20/01/20 17:53:28 INFO Executor: Finished task 20.0 in stage 2.0 (TID 74). 1738 bytes result sent to driver
+20/01/20 17:53:28 INFO CoarseGrainedExecutorBackend: Got assigned task 77
+20/01/20 17:53:28 INFO Executor: Running task 23.0 in stage 2.0 (TID 77)
+20/01/20 17:53:28 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1543503872+67108864
+20/01/20 17:54:11 INFO PythonRunner: Times: total = 42558, boot = -41, init = 44, finish = 42555
+20/01/20 17:54:11 INFO Executor: Finished task 23.0 in stage 2.0 (TID 77). 1738 bytes result sent to driver
+20/01/20 17:54:11 INFO CoarseGrainedExecutorBackend: Got assigned task 79
+20/01/20 17:54:11 INFO Executor: Running task 25.0 in stage 2.0 (TID 79)
+20/01/20 17:54:11 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripdata_1m.csv:1677721600+67108864
+20/01/20 17:54:53 INFO PythonRunner: Times: total = 42457, boot = -23, init = 26, finish = 42454
+20/01/20 17:54:53 INFO Executor: Finished task 25.0 in stage 2.0 (TID 79). 1738 bytes result sent to driver
+20/01/20 17:55:11 INFO CoarseGrainedExecutorBackend: Got assigned task 83
+20/01/20 17:55:11 INFO Executor: Running task 1.0 in stage 4.0 (TID 83)
+20/01/20 17:55:11 INFO MapOutputTrackerWorker: Updating epoch to 1 and clearing cache
+20/01/20 17:55:11 INFO TorrentBroadcast: Started reading broadcast variable 6
+20/01/20 17:55:11 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:40901 after 3 ms (0 ms spent in bootstraps)
+20/01/20 17:55:11 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 8.0 KB, free 92.9 MB)
+20/01/20 17:55:11 INFO TorrentBroadcast: Reading broadcast variable 6 took 102 ms
+20/01/20 17:55:11 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 14.4 KB, free 92.9 MB)
+20/01/20 17:55:11 INFO PythonRunner: Times: total = 7, boot = -17949, init = 17956, finish = 0
+20/01/20 17:55:11 INFO PythonRunner: Times: total = 79, boot = 14, init = 45, finish = 20
+20/01/20 17:55:11 INFO Executor: Finished task 1.0 in stage 4.0 (TID 83). 1587 bytes result sent to driver
+20/01/20 17:55:11 INFO CoarseGrainedExecutorBackend: Got assigned task 85
+20/01/20 17:55:11 INFO Executor: Running task 3.0 in stage 4.0 (TID 85)
+20/01/20 17:55:11 INFO HadoopRDD: Input split: hdfs://master:9000/yellow_tripvendors_1m.csv:67108864+67108864
+20/01/20 17:55:11 INFO TorrentBroadcast: Started reading broadcast variable 5
+20/01/20 17:55:11 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 23.0 KB, free 92.9 MB)
+20/01/20 17:55:11 INFO TorrentBroadcast: Reading broadcast variable 5 took 14 ms
+20/01/20 17:55:11 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 320.9 KB, free 92.6 MB)
+20/01/20 17:55:26 INFO PythonRunner: Times: total = 15281, boot = -181, init = 204, finish = 15258
+20/01/20 17:55:26 INFO PythonRunner: Times: total = 15263, boot = -97, init = 15359, finish = 1
+20/01/20 17:55:26 INFO Executor: Finished task 3.0 in stage 4.0 (TID 85). 1759 bytes result sent to driver
+20/01/20 17:55:38 INFO CoarseGrainedExecutorBackend: Got assigned task 87
+20/01/20 17:55:38 INFO Executor: Running task 1.0 in stage 5.0 (TID 87)
+20/01/20 17:55:38 INFO MapOutputTrackerWorker: Updating epoch to 2 and clearing cache
+20/01/20 17:55:38 INFO TorrentBroadcast: Started reading broadcast variable 7
+20/01/20 17:55:38 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 6.8 KB, free 92.6 MB)
+20/01/20 17:55:38 INFO TorrentBroadcast: Reading broadcast variable 7 took 17 ms
+20/01/20 17:55:38 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 11.5 KB, free 92.5 MB)
+20/01/20 17:55:38 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+20/01/20 17:55:38 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@master:41803)
+20/01/20 17:55:38 INFO MapOutputTrackerWorker: Got the output locations
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Getting 4 non-empty blocks including 2 local blocks and 2 remote blocks
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 14 ms
+20/01/20 17:55:38 INFO PythonRunner: Times: total = 38, boot = -11571, init = 11609, finish = 0
+20/01/20 17:55:38 INFO Executor: Finished task 1.0 in stage 5.0 (TID 87). 1719 bytes result sent to driver
+20/01/20 17:55:38 INFO CoarseGrainedExecutorBackend: Got assigned task 91
+20/01/20 17:55:38 INFO Executor: Running task 2.0 in stage 5.0 (TID 91)
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/20 17:55:38 INFO PythonRunner: Times: total = 46, boot = -11632, init = 11677, finish = 1
+20/01/20 17:55:38 INFO Executor: Finished task 2.0 in stage 5.0 (TID 91). 1719 bytes result sent to driver
+20/01/20 17:55:38 INFO CoarseGrainedExecutorBackend: Got assigned task 93
+20/01/20 17:55:38 INFO Executor: Running task 3.0 in stage 7.0 (TID 93)
+20/01/20 17:55:38 INFO TorrentBroadcast: Started reading broadcast variable 8
+20/01/20 17:55:38 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 6.8 KB, free 92.5 MB)
+20/01/20 17:55:38 INFO TorrentBroadcast: Reading broadcast variable 8 took 19 ms
+20/01/20 17:55:38 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 11.2 KB, free 92.5 MB)
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/20 17:55:38 INFO PythonRunner: Times: total = 52, boot = -165, init = 217, finish = 0
+20/01/20 17:55:38 INFO Executor: Finished task 3.0 in stage 7.0 (TID 93). 1726 bytes result sent to driver
+20/01/20 17:55:38 INFO CoarseGrainedExecutorBackend: Got assigned task 95
+20/01/20 17:55:38 INFO Executor: Running task 0.0 in stage 7.0 (TID 95)
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/20 17:55:38 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+20/01/20 17:55:38 INFO PythonRunner: Times: total = 59, boot = -190, init = 249, finish = 0
+20/01/20 17:55:38 INFO Executor: Finished task 0.0 in stage 7.0 (TID 95). 1687 bytes result sent to driver
+20/01/20 17:55:39 INFO CoarseGrainedExecutorBackend: Got assigned task 98
+20/01/20 17:55:39 INFO Executor: Running task 3.0 in stage 9.0 (TID 98)
+20/01/20 17:55:39 INFO TorrentBroadcast: Started reading broadcast variable 9
+20/01/20 17:55:39 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 7.4 KB, free 92.6 MB)
+20/01/20 17:55:39 INFO TorrentBroadcast: Reading broadcast variable 9 took 26 ms
+20/01/20 17:55:39 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 12.2 KB, free 92.6 MB)
+20/01/20 17:55:39 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/20 17:55:39 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 8 ms
+20/01/20 17:55:39 INFO PythonRunner: Times: total = 50, boot = -717, init = 767, finish = 0
+20/01/20 17:55:39 INFO Executor: Finished task 3.0 in stage 9.0 (TID 98). 1888 bytes result sent to driver
+20/01/20 17:55:39 INFO CoarseGrainedExecutorBackend: Got assigned task 99
+20/01/20 17:55:39 INFO Executor: Running task 4.0 in stage 9.0 (TID 99)
+20/01/20 17:55:39 INFO ShuffleBlockFetcherIterator: Getting 3 non-empty blocks including 2 local blocks and 1 remote blocks
+20/01/20 17:55:39 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+20/01/20 17:55:39 INFO PythonRunner: Times: total = 57, boot = -726, init = 782, finish = 1
+20/01/20 17:55:39 INFO Executor: Finished task 4.0 in stage 9.0 (TID 99). 1888 bytes result sent to driver
+20/01/20 17:55:39 INFO CoarseGrainedExecutorBackend: Got assigned task 102
+20/01/20 17:55:39 INFO Executor: Running task 3.0 in stage 10.0 (TID 102)
+20/01/20 17:55:39 INFO MapOutputTrackerWorker: Updating epoch to 3 and clearing cache
+20/01/20 17:55:39 INFO TorrentBroadcast: Started reading broadcast variable 10
+20/01/20 17:55:39 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 30.1 KB, free 92.6 MB)
+20/01/20 17:55:39 INFO TorrentBroadcast: Reading broadcast variable 10 took 32 ms
+20/01/20 17:55:39 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 79.6 KB, free 92.5 MB)
+20/01/20 17:55:39 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+20/01/20 17:55:39 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@master:41803)
+20/01/20 17:55:39 INFO MapOutputTrackerWorker: Got the output locations
+20/01/20 17:55:39 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 0 local blocks and 1 remote blocks
+20/01/20 17:55:39 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 12 ms
+20/01/20 17:55:39 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+20/01/20 17:55:39 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/20 17:55:39 INFO PythonRunner: Times: total = 49, boot = -334, init = 382, finish = 1
+20/01/20 17:55:40 INFO PythonRunner: Times: total = 53, boot = -227, init = 280, finish = 0
+20/01/20 17:55:40 INFO FileOutputCommitter: Saved output of task 'attempt_20200120175539_0031_m_000003_0' to hdfs://master:9000/Q2-MR-out/_temporary/0/task_20200120175539_0031_m_000003
+20/01/20 17:55:40 INFO SparkHadoopMapRedUtil: attempt_20200120175539_0031_m_000003_0: Committed
+20/01/20 17:55:40 INFO Executor: Finished task 3.0 in stage 10.0 (TID 102). 2067 bytes result sent to driver
+20/01/20 17:55:40 INFO CoarseGrainedExecutorBackend: Got assigned task 104
+20/01/20 17:55:40 INFO Executor: Running task 5.0 in stage 10.0 (TID 104)
+20/01/20 17:55:40 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/01/20 17:55:40 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 7 ms
+20/01/20 17:55:40 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+20/01/20 17:55:40 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/20 17:55:40 INFO PythonRunner: Times: total = 48, boot = -372, init = 419, finish = 1
+20/01/20 17:55:40 INFO PythonRunner: Times: total = 50, boot = -367, init = 417, finish = 0
+20/01/20 17:55:40 WARN DFSClient: Caught exception 
+java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.closeResponder(DFSOutputStream.java:609)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.endBlock(DFSOutputStream.java:370)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:546)
+20/01/20 17:55:40 INFO FileOutputCommitter: Saved output of task 'attempt_20200120175539_0031_m_000005_0' to hdfs://master:9000/Q2-MR-out/_temporary/0/task_20200120175539_0031_m_000005
+20/01/20 17:55:40 INFO SparkHadoopMapRedUtil: attempt_20200120175539_0031_m_000005_0: Committed
+20/01/20 17:55:40 INFO Executor: Finished task 5.0 in stage 10.0 (TID 104). 2024 bytes result sent to driver
+20/01/20 17:55:40 INFO CoarseGrainedExecutorBackend: Got assigned task 107
+20/01/20 17:55:40 INFO Executor: Running task 1.0 in stage 10.0 (TID 107)
+20/01/20 17:55:40 INFO HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+20/01/20 17:55:40 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/20 17:55:40 INFO PythonRunner: Times: total = 50, boot = -71, init = 120, finish = 1
+20/01/20 17:55:40 INFO PythonRunner: Times: total = 47, boot = -81, init = 128, finish = 0
+20/01/20 17:55:40 INFO FileOutputCommitter: Saved output of task 'attempt_20200120175539_0031_m_000001_0' to hdfs://master:9000/Q2-MR-out/_temporary/0/task_20200120175539_0031_m_000001
+20/01/20 17:55:40 INFO SparkHadoopMapRedUtil: attempt_20200120175539_0031_m_000001_0: Committed
+20/01/20 17:55:41 INFO Executor: Finished task 1.0 in stage 10.0 (TID 107). 1723 bytes result sent to driver
+20/01/20 17:55:41 INFO CoarseGrainedExecutorBackend: Got assigned task 110
+20/01/20 17:55:41 INFO Executor: Running task 4.0 in stage 13.0 (TID 110)
+20/01/20 17:55:41 INFO TorrentBroadcast: Started reading broadcast variable 11
+20/01/20 17:55:41 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 5.3 KB, free 92.5 MB)
+20/01/20 17:55:41 INFO TorrentBroadcast: Reading broadcast variable 11 took 12 ms
+20/01/20 17:55:41 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 9.2 KB, free 92.5 MB)
+20/01/20 17:55:41 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+20/01/20 17:55:41 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+20/01/20 17:55:41 INFO PythonRunner: Times: total = 40, boot = -644, init = 684, finish = 0
+20/01/20 17:55:41 INFO Executor: Finished task 4.0 in stage 13.0 (TID 110). 1752 bytes result sent to driver
+20/01/20 17:55:41 INFO CoarseGrainedExecutorBackend: Got assigned task 112
+20/01/20 17:55:41 INFO Executor: Running task 6.0 in stage 13.0 (TID 112)
+20/01/20 17:55:41 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 1 local blocks and 1 remote blocks
+20/01/20 17:55:41 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 5 ms
+20/01/20 17:55:41 INFO PythonRunner: Times: total = 44, boot = -705, init = 749, finish = 0
+20/01/20 17:55:41 INFO Executor: Finished task 6.0 in stage 13.0 (TID 112). 1804 bytes result sent to driver
+20/01/20 17:55:41 INFO CoarseGrainedExecutorBackend: Got assigned task 113
+20/01/20 17:55:41 INFO Executor: Running task 0.0 in stage 13.0 (TID 113)
+20/01/20 17:55:41 INFO PythonRunner: Times: total = 55, boot = -60, init = 115, finish = 0
+20/01/20 17:55:41 INFO Executor: Finished task 0.0 in stage 13.0 (TID 113). 1386 bytes result sent to driver
+20/01/20 17:55:41 INFO CoarseGrainedExecutorBackend: Got assigned task 115
+20/01/20 17:55:41 INFO Executor: Running task 2.0 in stage 13.0 (TID 115)
+20/01/20 17:55:41 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/20 17:55:41 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/20 17:55:41 INFO PythonRunner: Times: total = 51, boot = -69, init = 120, finish = 0
+20/01/20 17:55:41 INFO Executor: Finished task 2.0 in stage 13.0 (TID 115). 1687 bytes result sent to driver
+20/01/20 17:55:41 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+inish = 0
+20/01/20 17:55:41 INFO Executor: Finished task 2.0 in stage 13.0 (TID 115). 1687 bytes result sent to driver
