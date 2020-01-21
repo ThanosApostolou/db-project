@@ -1,20 +1,25 @@
 from __future__ import print_function
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-#from pyspark.sql.types import *
-#from pyspark.sql.functions import udf
 import sys
 import datetime
+
+def map_rides (line) :
+    line = line.split(",")
+    ride_id = line[0]
+    hourofday = line[1].split(" ")[1].split(":")[0]
+    finish_datetime = datetime.datetime.strptime(line[2], '%Y-%m-%d %H:%M:%S')
+    start_datetime = datetime.datetime.strptime(line[1], '%Y-%m-%d %H:%M:%S')
+    ride_duration=(finish_datetime - start_datetime).total_seconds() / 60
+    myrow = Row(id=ride_id, HourOfDay=hourofday, duration=ride_duration)
+    return myrow
 
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("Q1-SQL").getOrCreate()
     sc = spark.sparkContext
 
     rides = sc.textFile("hdfs://master:9000/yellow_tripdata_1m.csv")
-    rides = rides.map(lambda l: l.split(","))
-    rides = rides.map(lambda l: Row(id=l[0], \
-                                HourOfDay = l[1].split(" ")[1].split(":")[0], \
-                                duration=(datetime.datetime.strptime(l[2], '%Y-%m-%d %H:%M:%S') - datetime.datetime.strptime(l[1], '%Y-%m-%d %H:%M:%S')).total_seconds() / 60))
+    rides = rides.map(map_rides)
 
     schemaRides = spark.createDataFrame(rides)
     schemaRides.createOrReplaceTempView("rides")
