@@ -169,7 +169,7 @@ def programmatic_schema_example(spark):
     sc = spark.sparkContext
 
     # Load a text file and convert each line to a Row.
-    lines = sc.textFile("examples/src/main/resources/people.txt")
+    lines = sc.textFile("/tripdata-min.csv")
     parts = lines.map(lambda l: l.split(","))
     # Each line is converted to a tuple.
     people = parts.map(lambda p: (p[0], p[1].strip()))
@@ -208,8 +208,8 @@ if __name__ == "__main__":
         .getOrCreate()
     # $example off:init_session$
 
-    basic_df_example(spark)
-    schema_inference_example(spark)
+    #basic_df_example(spark)
+    #schema_inference_example(spark)
     programmatic_schema_example(spark)
 
     spark.stop()
