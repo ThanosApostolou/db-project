@@ -1,24 +1,18 @@
-from __future__ import print_function
 from pyspark.sql import SparkSession
-from pyspark.sql import Row
+from pyspark.sql.functions import udf
 import sys
 import datetime
 import math
 
-def map_rides (line) :
-    line = line.split(",")
-    ride_id = line[0]
-    hourofday = line[1].split(" ")[1].split(":")[0]
-    finish_datetime = datetime.datetime.strptime(line[2], '%Y-%m-%d %H:%M:%S')
-    start_datetime = datetime.datetime.strptime(line[1], '%Y-%m-%d %H:%M:%S')
-    start_date = start_datetime.date()
-
+def calculate_speed (start_datetime, finish_datetime, l_start, f_start, l_finish, f_finish) :
+    finish_datetime = datetime.datetime.strptime(finish_datetime, '%Y-%m-%d %H:%M:%S')
+    start_datetime = datetime.datetime.strptime(start_datetime, '%Y-%m-%d %H:%M:%S')
     duration=(finish_datetime - start_datetime).total_seconds() / 60
 
-    l_start = float(line[3])
-    f_start = float(line[4])
-    l_finish = float(line[5])
-    f_finish = float(line[6])
+    l_start = float(l_start)
+    f_start = float(f_start)
+    l_finish = float(l_finish)
+    f_finish = float(f_finish)
     Df = f_finish - f_start
     Dl = l_finish - l_start
     a = math.sin(Df/2)**2 + math.cos(f_start) * math.cos(f_finish) * (math.sin(Dl/2)**2)
@@ -29,39 +23,33 @@ def map_rides (line) :
         speed = 0
     else :
         speed = distance / duration
-    return Row(Ride=ride_id, StartDay=start_date, Speed=speed)
-
-def map_vendors (line) :
-    line = line.split(",")
-    ride_id = line[0]
-    vendor = line[1]
-    return Row(Ride=ride_id, Vendor=vendor)
+    return speed
 
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("Q2-SQL-PARQUET").getOrCreate()
-    sc = spark.sparkContext
 
-    rides = sc.textFile("hdfs://master:9000/yellow_tripdata_1m.csv")
-    rides = rides.map(map_rides)
-    rides = spark.createDataFrame(rides)
-    rides.createOrReplaceTempView("rides")
+    trips = spark.read.parquet("hdfs://master:9000/yellow_tripdata_1m.parquet")
 
-    fastest_rides = spark.sql("SELECT Ride, Speed \
-                               FROM rides \
-                               WHERE StartDay > '2015-03-10' \
-                               ORDER BY Speed DESC \
-                               LIMIT 5")
-    fastest_rides.createOrReplaceTempView("fastest_rides")
+    speedUdf = udf(calculate_speed)
+    trips = trips.withColumn("Speed", speedUdf("StartDate", "FinishDate", "StartLongitude",
+                             "StartLatitude", "FinishLongitude", "FinishLatitude"))
+    trips = trips.selectExpr("TripID", "Speed", "cast(StartDate as DATE)")
+    trips.createOrReplaceTempView("trips")
 
-    vendors = sc.textFile("hdfs://master:9000/yellow_tripvendors_1m.csv")
-    vendors = vendors.map(map_vendors)
-    vendors = spark.createDataFrame(vendors)
+    trips = spark.sql("SELECT TripID, Speed \
+                      FROM trips \
+                      WHERE StartDate > '2015-03-10' \
+                      ORDER BY Speed DESC \
+                      LIMIT 5")
+    trips.createOrReplaceTempView("trips")
+
+    vendors = spark.read.parquet("hdfs://master:9000/yellow_tripvendors_1m.parquet")
     vendors.createOrReplaceTempView("vendors")
 
-    result = spark.sql("SELECT fastest_rides.Ride, Speed, Vendor \
-                        FROM fastest_rides \
+    result = spark.sql("SELECT trips.TripID, Speed, vendors.VendorID \
+                        FROM trips \
                         LEFT JOIN vendors \
-                        ON fastest_rides.Ride = vendors.Ride \
+                        ON trips.TripID = vendors.TripID \
                         ORDER BY Speed DESC")
 
     result.write.format("csv").mode("overwrite").options(delimiter='\t').save("hdfs://master:9000/Q2-SQL-PARQUET-out")
