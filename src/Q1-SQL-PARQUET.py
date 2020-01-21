@@ -1,16 +1,12 @@
-from __future__ import print_function
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
-import sys
-import datetime
 
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("Q1-SQL-PARQUET").getOrCreate()
 
     trips = spark.read.parquet("hdfs://master:9000/yellow_tripdata_1m.parquet")
-    trips.show()
 
     trips = trips.selectExpr("TripID",
             "date_format(cast(StartDate as Timestamp),'HH') as HourOfDay",

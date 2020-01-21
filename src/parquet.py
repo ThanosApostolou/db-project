@@ -4,7 +4,6 @@ from pyspark.sql.types import *
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("parquet").getOrCreate()
 
-
     tschema = StructType([
         StructField("TripID", StringType(), False),
         StructField("StartDate", StringType(), True),
