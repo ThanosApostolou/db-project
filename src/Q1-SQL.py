@@ -16,7 +16,7 @@ if __name__ == "__main__":
         StructField("FinishLatitude", StringType(), True),
         StructField("Cost", StringType(), True)
     ])
-    trips = spark.read.schema(tschema).csv("hdfs://master:9000/tripdata-min.csv")
+    trips = spark.read.schema(tschema).csv("hdfs://master:9000/yellow_tripdata_1m.csv")
 
     trips = trips.selectExpr("TripID",
             "date_format(cast(StartDate as Timestamp),'HH') as HourOfDay",

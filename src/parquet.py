@@ -14,7 +14,7 @@ if __name__ == "__main__":
         StructField("FinishLatitude", StringType(), True),
         StructField("Cost", StringType(), True)
     ])
-    tdf = spark.read.schema(tschema).csv("hdfs://master:9000/tripdata-min.csv")
+    tdf = spark.read.schema(tschema).csv("hdfs://master:9000/yellow_tripdata_1m.csv")
     tdf.write.mode("overwrite").parquet("hdfs://master:9000/yellow_tripdata_1m.parquet")
 
     vschema = StructType([
