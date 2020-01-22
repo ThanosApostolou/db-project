@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     trips = trips.selectExpr("TripID",
             "date_format(cast(StartDate as Timestamp),'HH') as HourOfDay",
-            "(cast(cast(FinishDate as Timestamp)as long) - cast(cast(StartDate as Timestamp)as long))/60 as Duration")
+            "(cast(cast(FinishDate as Timestamp)as double) - cast(cast(StartDate as Timestamp)as double))/60 as Duration")
     trips.createOrReplaceTempView("trips")
 
     result = spark.sql("SELECT HourOfDay, AVG(Duration) AS AverageTripDuration \

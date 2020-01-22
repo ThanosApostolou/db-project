@@ -5,15 +5,12 @@ import datetime
 
 def mapper (line) :
     line_list = line.split(",")
-
     start_date = line_list[1]
     sd = datetime.datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S')
     finish_date = line_list[2]
     fd = datetime.datetime.strptime(finish_date, '%Y-%m-%d %H:%M:%S')
-
     duration = (fd - sd).total_seconds() / 60
     start_hour = start_date.split(" ")[1].split(":")[0]
-
     return (start_hour, (duration, 1))
 
 def reducer (a, b) :
@@ -21,9 +18,6 @@ def reducer (a, b) :
 
 def mapper2 (line) :
     return ("" + line[0] + "\t\t" + str(line[1][0]/line[1][1]))
-
-def myprint (line) :
-    print (line)
 
 if __name__ == "__main__":
     sc = SparkContext(appName="Q1-MR")

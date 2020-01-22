@@ -19,5 +19,5 @@ elif [ "$1" = "2c" ]; then
 elif [ "$1" = "parquet" ]; then
     time spark-submit ./src/parquet.py
 else
-    echo "Usage: run.sh {1a}"
+    echo "Usage: run.sh {1a,1b,1c,2a,2b,2c,parquet}"
 fi
