@@ -5,21 +5,28 @@ import sys
 import datetime
 import math
 
-def calculate_speed (start_datetime, finish_datetime, l_start, f_start, l_finish, f_finish) :
-    finish_datetime = datetime.datetime.strptime(finish_datetime, '%Y-%m-%d %H:%M:%S')
-    start_datetime = datetime.datetime.strptime(start_datetime, '%Y-%m-%d %H:%M:%S')
+def calculate_duration (sd, fd) :
+    finish_datetime = datetime.datetime.strptime(fd, '%Y-%m-%d %H:%M:%S')
+    start_datetime = datetime.datetime.strptime(sd, '%Y-%m-%d %H:%M:%S')
     duration=(finish_datetime - start_datetime).total_seconds() / 60
+    return duration
 
-    l_start = float(l_start)
-    f_start = float(f_start)
-    l_finish = float(l_finish)
-    f_finish = float(f_finish)
+def calculate_distance (ls, fs, lf, ff) :
+    l_start = float(ls)
+    f_start = float(fs)
+    l_finish = float(lf)
+    f_finish = float(ff)
     Df = f_finish - f_start
     Dl = l_finish - l_start
-    a = math.sin(Df/2)**2 + math.cos(f_start) * math.cos(f_finish) * (math.sin(Dl/2)**2)
+    a = math.pow(math.sin(Df/2),2) + math.cos(f_start) * math.cos(f_finish) * math.pow(math.sin(Dl/2),2)
     c = math.atan2(math.sqrt(a), math.sqrt(1-a))
     R = 6371
     distance = R * c
+    return distance
+
+def calculate_speed (sd, fd, ls, fs, lf, ff) :
+    duration = calculate_duration(sd, fd)
+    distance = calculate_distance(ls, fs, lf, ff)
     if (duration == 0) :
         speed = 0
     else :
@@ -41,15 +48,13 @@ if __name__ == "__main__":
     ])
     trips = spark.read.schema(tschema).csv("hdfs://master:9000/yellow_tripdata_1m.csv")
 
-    speedUdf = udf(calculate_speed)
+    speedUdf = udf(calculate_speed, DoubleType())
     trips = trips.withColumn("Speed", speedUdf("StartDate", "FinishDate", "StartLongitude",
                              "StartLatitude", "FinishLongitude", "FinishLatitude"))
-    trips = trips.selectExpr("TripID", "Speed", "cast(StartDate as DATE)")
     trips.createOrReplaceTempView("trips")
-
     trips = spark.sql("SELECT TripID, Speed \
                       FROM trips \
-                      WHERE StartDate > '2015-03-10' \
+                      WHERE cast(StartDate as DATE) > cast('2015-03-10' as DATE) \
                       ORDER BY Speed DESC \
                       LIMIT 5")
     trips.createOrReplaceTempView("trips")
