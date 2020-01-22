@@ -1,0 +1,820 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/home/user/spark-2.4.4-bin-hadoop2.7/conf/:/home/user/spark-2.4.4-bin-hadoop2.7/jars/*" "-Xmx512M" "-Dspark.driver.port=43464" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@master:43464" "--executor-id" "0" "--hostname" "192.168.0.2" "--cores" "1" "--app-id" "app-20200122213517-0003" "--worker-url" "spark://Worker@192.168.0.2:41553"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/01/22 21:35:18 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 4064@slave
+20/01/22 21:35:18 INFO SignalUtils: Registered signal handler for TERM
+20/01/22 21:35:18 INFO SignalUtils: Registered signal handler for HUP
+20/01/22 21:35:18 INFO SignalUtils: Registered signal handler for INT
+20/01/22 21:35:19 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/01/22 21:35:19 INFO SecurityManager: Changing view acls to: user
+20/01/22 21:35:19 INFO SecurityManager: Changing modify acls to: user
+20/01/22 21:35:19 INFO SecurityManager: Changing view acls groups to: 
+20/01/22 21:35:19 INFO SecurityManager: Changing modify acls groups to: 
+20/01/22 21:35:19 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/22 21:35:20 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:43464 after 141 ms (0 ms spent in bootstraps)
+20/01/22 21:35:20 INFO SecurityManager: Changing view acls to: user
+20/01/22 21:35:20 INFO SecurityManager: Changing modify acls to: user
+20/01/22 21:35:20 INFO SecurityManager: Changing view acls groups to: 
+20/01/22 21:35:20 INFO SecurityManager: Changing modify acls groups to: 
+20/01/22 21:35:20 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/22 21:35:20 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:43464 after 2 ms (0 ms spent in bootstraps)
+20/01/22 21:35:20 INFO DiskBlockManager: Created local directory at /tmp/spark-7012dd7e-2a36-4811-a74e-2fcdd733c44d/executor-90d0961a-2d9c-4e41-946c-824b7c28f508/blockmgr-8bdb3f83-6692-4355-8b58-da2138ea8907
+20/01/22 21:35:20 INFO MemoryStore: MemoryStore started with capacity 93.3 MB
+20/01/22 21:35:21 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master:43464
+20/01/22 21:35:21 INFO WorkerWatcher: Connecting to worker spark://Worker@192.168.0.2:41553
+20/01/22 21:35:21 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:41553 after 20 ms (0 ms spent in bootstraps)
+20/01/22 21:35:21 INFO WorkerWatcher: Successfully connected to spark://Worker@192.168.0.2:41553
+20/01/22 21:35:21 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/01/22 21:35:21 INFO Executor: Starting executor ID 0 on host 192.168.0.2
+20/01/22 21:35:21 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38135.
+20/01/22 21:35:21 INFO NettyBlockTransferService: Server created on 192.168.0.2:38135
+20/01/22 21:35:21 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/01/22 21:35:21 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 192.168.0.2, 38135, None)
+20/01/22 21:35:21 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 192.168.0.2, 38135, None)
+20/01/22 21:35:21 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 192.168.0.2, 38135, None)
+20/01/22 21:35:21 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/01/22 21:35:21 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/01/22 21:35:21 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/01/22 21:35:21 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:37393 after 14 ms (0 ms spent in bootstraps)
+20/01/22 21:35:22 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 25.1 KB, free 93.3 MB)
+20/01/22 21:35:22 INFO TorrentBroadcast: Reading broadcast variable 0 took 212 ms
+20/01/22 21:35:22 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 70.4 KB, free 93.2 MB)
+20/01/22 21:35:23 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1844 bytes result sent to driver
+20/01/22 21:35:25 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/01/22 21:35:25 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+20/01/22 21:35:25 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/01/22 21:35:25 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 25.1 KB, free 93.3 MB)
+20/01/22 21:35:25 INFO TorrentBroadcast: Reading broadcast variable 1 took 23 ms
+20/01/22 21:35:25 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 70.4 KB, free 93.2 MB)
+20/01/22 21:35:25 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1499 bytes result sent to driver
+20/01/22 21:35:28 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/01/22 21:35:28 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+20/01/22 21:35:28 INFO TorrentBroadcast: Started reading broadcast variable 4
+20/01/22 21:35:28 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 11.7 KB, free 93.3 MB)
+20/01/22 21:35:28 INFO TorrentBroadcast: Reading broadcast variable 4 took 16 ms
+20/01/22 21:35:28 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 26.2 KB, free 93.3 MB)
+20/01/22 21:35:30 INFO CodeGenerator: Code generated in 499.128606 ms
+20/01/22 21:35:30 INFO CodeGenerator: Code generated in 306.278159 ms
+20/01/22 21:35:30 INFO CodeGenerator: Code generated in 40.217304 ms
+20/01/22 21:35:31 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00001-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28756588, partition values: [empty row]
+20/01/22 21:35:31 INFO TorrentBroadcast: Started reading broadcast variable 2
+20/01/22 21:35:31 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 24.3 KB, free 93.2 MB)
+20/01/22 21:35:31 INFO TorrentBroadcast: Reading broadcast variable 2 took 27 ms
+20/01/22 21:35:31 INFO CodeGenerator: Code generated in 87.092094 ms
+20/01/22 21:35:31 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 331.8 KB, free 92.9 MB)
+20/01/22 21:35:31 INFO CodeGenerator: Code generated in 36.525845 ms
+20/01/22 21:35:31 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:31 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:31 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:32 INFO CodecPool: Got brand-new decompressor [.snappy]
+20/01/22 21:35:45 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00002-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28677886, partition values: [empty row]
+20/01/22 21:35:45 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:45 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:45 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:49 INFO TaskMemoryManager: Memory used in task 2
+20/01/22 21:35:49 INFO TaskMemoryManager: Acquired by HybridRowQueue(org.apache.spark.memory.TaskMemoryManager@4f249367,/tmp/spark-7012dd7e-2a36-4811-a74e-2fcdd733c44d/executor-90d0961a-2d9c-4e41-946c-824b7c28f508/spark-7a8eb3aa-260b-4779-8258-6aeb18e2600b,7,org.apache.spark.serializer.SerializerManager@31fe3872): 92.9 MB
+20/01/22 21:35:49 INFO TaskMemoryManager: 0 bytes of memory were used by task 2 but are not associated with specific consumers
+20/01/22 21:35:49 INFO TaskMemoryManager: 97428766 bytes of memory are used for execution and 403374 bytes of memory are used for storage
+20/01/22 21:35:57 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00011-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28592467, partition values: [empty row]
+20/01/22 21:35:58 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:58 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:35:58 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:36:32 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00000-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28061867, partition values: [empty row]
+20/01/22 21:36:32 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:36:32 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:36:32 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:36:47 INFO PythonUDFRunner: Times: total = 75706, boot = 515, init = 1922, finish = 73269
+20/01/22 21:36:47 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2475 bytes result sent to driver
+20/01/22 21:36:47 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+20/01/22 21:36:47 INFO Executor: Running task 2.0 in stage 2.0 (TID 4)
+20/01/22 21:36:47 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00012-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-27168230, partition values: [empty row]
+20/01/22 21:36:47 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:36:47 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:36:47 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:37:01 INFO TaskMemoryManager: Memory used in task 4
+20/01/22 21:37:01 INFO TaskMemoryManager: Acquired by HybridRowQueue(org.apache.spark.memory.TaskMemoryManager@303497ca,/tmp/spark-7012dd7e-2a36-4811-a74e-2fcdd733c44d/executor-90d0961a-2d9c-4e41-946c-824b7c28f508/spark-7a8eb3aa-260b-4779-8258-6aeb18e2600b,7,org.apache.spark.serializer.SerializerManager@31fe3872): 92.9 MB
+20/01/22 21:37:01 INFO TaskMemoryManager: 0 bytes of memory were used by task 4 but are not associated with specific consumers
+20/01/22 21:37:01 INFO TaskMemoryManager: 97428766 bytes of memory are used for execution and 403374 bytes of memory are used for storage
+20/01/22 21:37:20 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00008-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-26950106, partition values: [empty row]
+20/01/22 21:37:20 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:37:20 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:37:20 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:03 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00004-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-26782962, partition values: [empty row]
+20/01/22 21:38:03 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:03 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:03 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:21 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00006-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-26675737, partition values: [empty row]
+20/01/22 21:38:21 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:21 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:21 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:38:46 INFO PythonUDFRunner: Times: total = 117460, boot = -1523, init = 1769, finish = 117214
+20/01/22 21:38:46 INFO Executor: Finished task 2.0 in stage 2.0 (TID 4). 2432 bytes result sent to driver
+20/01/22 21:38:47 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+20/01/22 21:38:47 INFO Executor: Running task 0.0 in stage 5.0 (TID 9)
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Updating epoch to 3 and clearing cache
+20/01/22 21:38:47 INFO TorrentBroadcast: Started reading broadcast variable 7
+20/01/22 21:38:47 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 13.5 KB, free 92.9 MB)
+20/01/22 21:38:47 INFO TorrentBroadcast: Reading broadcast variable 7 took 28 ms
+20/01/22 21:38:47 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 30.3 KB, free 92.9 MB)
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 1, fetching them
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@master:43464)
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Got the output locations
+20/01/22 21:38:47 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:47 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+20/01/22 21:38:47 INFO CodeGenerator: Code generated in 69.019566 ms
+20/01/22 21:38:47 INFO CodeGenerator: Code generated in 27.198302 ms
+20/01/22 21:38:47 INFO CodeGenerator: Code generated in 41.309401 ms
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Don't have map outputs for shuffle 2, fetching them
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@master:43464)
+20/01/22 21:38:47 INFO MapOutputTrackerWorker: Got the output locations
+20/01/22 21:38:47 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:47 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:43704 after 4 ms (0 ms spent in bootstraps)
+20/01/22 21:38:47 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+20/01/22 21:38:47 INFO CodeGenerator: Code generated in 33.84946 ms
+20/01/22 21:38:47 INFO CodeGenerator: Code generated in 31.686645 ms
+20/01/22 21:38:47 INFO CodeGenerator: Code generated in 28.115247 ms
+20/01/22 21:38:48 INFO CodeGenerator: Code generated in 25.564079 ms
+20/01/22 21:38:48 INFO Executor: Finished task 0.0 in stage 5.0 (TID 9). 5399 bytes result sent to driver
+20/01/22 21:38:48 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/01/22 21:38:48 INFO Executor: Running task 3.0 in stage 5.0 (TID 12)
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 11 ms
+20/01/22 21:38:48 INFO Executor: Finished task 3.0 in stage 5.0 (TID 12). 5399 bytes result sent to driver
+20/01/22 21:38:48 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/01/22 21:38:48 INFO Executor: Running task 5.0 in stage 5.0 (TID 14)
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:48 INFO Executor: Finished task 5.0 in stage 5.0 (TID 14). 5356 bytes result sent to driver
+20/01/22 21:38:48 INFO CoarseGrainedExecutorBackend: Got assigned task 16
+20/01/22 21:38:48 INFO Executor: Running task 7.0 in stage 5.0 (TID 16)
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 6 ms
+20/01/22 21:38:48 INFO Executor: Finished task 7.0 in stage 5.0 (TID 16). 5399 bytes result sent to driver
+20/01/22 21:38:48 INFO CoarseGrainedExecutorBackend: Got assigned task 18
+20/01/22 21:38:48 INFO Executor: Running task 9.0 in stage 5.0 (TID 18)
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 0 local blocks and 1 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 4 ms
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 10 ms
+20/01/22 21:38:48 INFO Executor: Finished task 9.0 in stage 5.0 (TID 18). 5590 bytes result sent to driver
+20/01/22 21:38:48 INFO CoarseGrainedExecutorBackend: Got assigned task 21
+20/01/22 21:38:48 INFO Executor: Running task 12.0 in stage 5.0 (TID 21)
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:48 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:49 INFO Executor: Finished task 12.0 in stage 5.0 (TID 21). 5399 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 23
+20/01/22 21:38:49 INFO Executor: Running task 14.0 in stage 5.0 (TID 23)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:49 INFO Executor: Finished task 14.0 in stage 5.0 (TID 23). 5356 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 25
+20/01/22 21:38:49 INFO Executor: Running task 16.0 in stage 5.0 (TID 25)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 4 ms
+20/01/22 21:38:49 INFO Executor: Finished task 16.0 in stage 5.0 (TID 25). 5399 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 27
+20/01/22 21:38:49 INFO Executor: Running task 18.0 in stage 5.0 (TID 27)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:49 INFO Executor: Finished task 18.0 in stage 5.0 (TID 27). 5356 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 29
+20/01/22 21:38:49 INFO Executor: Running task 20.0 in stage 5.0 (TID 29)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 4 ms
+20/01/22 21:38:49 INFO Executor: Finished task 20.0 in stage 5.0 (TID 29). 5356 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 31
+20/01/22 21:38:49 INFO Executor: Running task 22.0 in stage 5.0 (TID 31)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 15 ms
+20/01/22 21:38:49 INFO Executor: Finished task 22.0 in stage 5.0 (TID 31). 5399 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 33
+20/01/22 21:38:49 INFO Executor: Running task 24.0 in stage 5.0 (TID 33)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 10 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 5 ms
+20/01/22 21:38:49 INFO Executor: Finished task 24.0 in stage 5.0 (TID 33). 5356 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 35
+20/01/22 21:38:49 INFO Executor: Running task 26.0 in stage 5.0 (TID 35)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+20/01/22 21:38:49 INFO Executor: Finished task 26.0 in stage 5.0 (TID 35). 5399 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 37
+20/01/22 21:38:49 INFO Executor: Running task 28.0 in stage 5.0 (TID 37)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:49 INFO Executor: Finished task 28.0 in stage 5.0 (TID 37). 5356 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 40
+20/01/22 21:38:49 INFO Executor: Running task 31.0 in stage 5.0 (TID 40)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:49 INFO Executor: Finished task 31.0 in stage 5.0 (TID 40). 5399 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 42
+20/01/22 21:38:49 INFO Executor: Running task 33.0 in stage 5.0 (TID 42)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:49 INFO Executor: Finished task 33.0 in stage 5.0 (TID 42). 5399 bytes result sent to driver
+20/01/22 21:38:49 INFO CoarseGrainedExecutorBackend: Got assigned task 44
+20/01/22 21:38:49 INFO Executor: Running task 35.0 in stage 5.0 (TID 44)
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:49 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:50 INFO Executor: Finished task 35.0 in stage 5.0 (TID 44). 5399 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 46
+20/01/22 21:38:50 INFO Executor: Running task 37.0 in stage 5.0 (TID 46)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 7 ms
+20/01/22 21:38:50 INFO Executor: Finished task 37.0 in stage 5.0 (TID 46). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 48
+20/01/22 21:38:50 INFO Executor: Running task 39.0 in stage 5.0 (TID 48)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:50 INFO Executor: Finished task 39.0 in stage 5.0 (TID 48). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 50
+20/01/22 21:38:50 INFO Executor: Running task 41.0 in stage 5.0 (TID 50)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:50 INFO Executor: Finished task 41.0 in stage 5.0 (TID 50). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 52
+20/01/22 21:38:50 INFO Executor: Running task 43.0 in stage 5.0 (TID 52)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:50 INFO Executor: Finished task 43.0 in stage 5.0 (TID 52). 5399 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 54
+20/01/22 21:38:50 INFO Executor: Running task 45.0 in stage 5.0 (TID 54)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 9 ms
+20/01/22 21:38:50 INFO Executor: Finished task 45.0 in stage 5.0 (TID 54). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 56
+20/01/22 21:38:50 INFO Executor: Running task 47.0 in stage 5.0 (TID 56)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:50 INFO Executor: Finished task 47.0 in stage 5.0 (TID 56). 5399 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 59
+20/01/22 21:38:50 INFO Executor: Running task 50.0 in stage 5.0 (TID 59)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:50 INFO Executor: Finished task 50.0 in stage 5.0 (TID 59). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 61
+20/01/22 21:38:50 INFO Executor: Running task 52.0 in stage 5.0 (TID 61)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:50 INFO Executor: Finished task 52.0 in stage 5.0 (TID 61). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 63
+20/01/22 21:38:50 INFO Executor: Running task 54.0 in stage 5.0 (TID 63)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:50 INFO Executor: Finished task 54.0 in stage 5.0 (TID 63). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 65
+20/01/22 21:38:50 INFO Executor: Running task 56.0 in stage 5.0 (TID 65)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:50 INFO Executor: Finished task 56.0 in stage 5.0 (TID 65). 5399 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 67
+20/01/22 21:38:50 INFO Executor: Running task 58.0 in stage 5.0 (TID 67)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:50 INFO Executor: Finished task 58.0 in stage 5.0 (TID 67). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 69
+20/01/22 21:38:50 INFO Executor: Running task 60.0 in stage 5.0 (TID 69)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:50 INFO Executor: Finished task 60.0 in stage 5.0 (TID 69). 5356 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 71
+20/01/22 21:38:50 INFO Executor: Running task 62.0 in stage 5.0 (TID 71)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:50 INFO Executor: Finished task 62.0 in stage 5.0 (TID 71). 5399 bytes result sent to driver
+20/01/22 21:38:50 INFO CoarseGrainedExecutorBackend: Got assigned task 73
+20/01/22 21:38:50 INFO Executor: Running task 64.0 in stage 5.0 (TID 73)
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:50 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:51 INFO Executor: Finished task 64.0 in stage 5.0 (TID 73). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 75
+20/01/22 21:38:51 INFO Executor: Running task 66.0 in stage 5.0 (TID 75)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:51 INFO Executor: Finished task 66.0 in stage 5.0 (TID 75). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 77
+20/01/22 21:38:51 INFO Executor: Running task 68.0 in stage 5.0 (TID 77)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 6 ms
+20/01/22 21:38:51 INFO Executor: Finished task 68.0 in stage 5.0 (TID 77). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 79
+20/01/22 21:38:51 INFO Executor: Running task 70.0 in stage 5.0 (TID 79)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:51 INFO Executor: Finished task 70.0 in stage 5.0 (TID 79). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 81
+20/01/22 21:38:51 INFO Executor: Running task 72.0 in stage 5.0 (TID 81)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 6 ms
+20/01/22 21:38:51 INFO Executor: Finished task 72.0 in stage 5.0 (TID 81). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 83
+20/01/22 21:38:51 INFO Executor: Running task 74.0 in stage 5.0 (TID 83)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 74.0 in stage 5.0 (TID 83). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 86
+20/01/22 21:38:51 INFO Executor: Running task 77.0 in stage 5.0 (TID 86)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 5 ms
+20/01/22 21:38:51 INFO Executor: Finished task 77.0 in stage 5.0 (TID 86). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 88
+20/01/22 21:38:51 INFO Executor: Running task 79.0 in stage 5.0 (TID 88)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:51 INFO Executor: Finished task 79.0 in stage 5.0 (TID 88). 5399 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 90
+20/01/22 21:38:51 INFO Executor: Running task 81.0 in stage 5.0 (TID 90)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 7 ms
+20/01/22 21:38:51 INFO Executor: Finished task 81.0 in stage 5.0 (TID 90). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 92
+20/01/22 21:38:51 INFO Executor: Running task 83.0 in stage 5.0 (TID 92)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 83.0 in stage 5.0 (TID 92). 5399 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 94
+20/01/22 21:38:51 INFO Executor: Running task 85.0 in stage 5.0 (TID 94)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 85.0 in stage 5.0 (TID 94). 5399 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 96
+20/01/22 21:38:51 INFO Executor: Running task 87.0 in stage 5.0 (TID 96)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 87.0 in stage 5.0 (TID 96). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 98
+20/01/22 21:38:51 INFO Executor: Running task 89.0 in stage 5.0 (TID 98)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 89.0 in stage 5.0 (TID 98). 5356 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 99
+20/01/22 21:38:51 INFO Executor: Running task 90.0 in stage 5.0 (TID 99)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 0 local blocks and 1 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 90.0 in stage 5.0 (TID 99). 5547 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 102
+20/01/22 21:38:51 INFO Executor: Running task 93.0 in stage 5.0 (TID 102)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:51 INFO Executor: Finished task 93.0 in stage 5.0 (TID 102). 5399 bytes result sent to driver
+20/01/22 21:38:51 INFO CoarseGrainedExecutorBackend: Got assigned task 103
+20/01/22 21:38:51 INFO Executor: Running task 94.0 in stage 5.0 (TID 103)
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:51 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 94.0 in stage 5.0 (TID 103). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 105
+20/01/22 21:38:52 INFO Executor: Running task 96.0 in stage 5.0 (TID 105)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:52 INFO Executor: Finished task 96.0 in stage 5.0 (TID 105). 5399 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 107
+20/01/22 21:38:52 INFO Executor: Running task 98.0 in stage 5.0 (TID 107)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 98.0 in stage 5.0 (TID 107). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 108
+20/01/22 21:38:52 INFO Executor: Running task 99.0 in stage 5.0 (TID 108)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:52 INFO Executor: Finished task 99.0 in stage 5.0 (TID 108). 5399 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 110
+20/01/22 21:38:52 INFO Executor: Running task 101.0 in stage 5.0 (TID 110)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:52 INFO Executor: Finished task 101.0 in stage 5.0 (TID 110). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 112
+20/01/22 21:38:52 INFO Executor: Running task 103.0 in stage 5.0 (TID 112)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:52 INFO Executor: Finished task 103.0 in stage 5.0 (TID 112). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 114
+20/01/22 21:38:52 INFO Executor: Running task 105.0 in stage 5.0 (TID 114)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 4 ms
+20/01/22 21:38:52 INFO Executor: Finished task 105.0 in stage 5.0 (TID 114). 5399 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 117
+20/01/22 21:38:52 INFO Executor: Running task 108.0 in stage 5.0 (TID 117)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 4 ms
+20/01/22 21:38:52 INFO Executor: Finished task 108.0 in stage 5.0 (TID 117). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 119
+20/01/22 21:38:52 INFO Executor: Running task 110.0 in stage 5.0 (TID 119)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 110.0 in stage 5.0 (TID 119). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 121
+20/01/22 21:38:52 INFO Executor: Running task 112.0 in stage 5.0 (TID 121)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 112.0 in stage 5.0 (TID 121). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 123
+20/01/22 21:38:52 INFO Executor: Running task 114.0 in stage 5.0 (TID 123)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 114.0 in stage 5.0 (TID 123). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 125
+20/01/22 21:38:52 INFO Executor: Running task 116.0 in stage 5.0 (TID 125)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:52 INFO Executor: Finished task 116.0 in stage 5.0 (TID 125). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 127
+20/01/22 21:38:52 INFO Executor: Running task 118.0 in stage 5.0 (TID 127)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 118.0 in stage 5.0 (TID 127). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 129
+20/01/22 21:38:52 INFO Executor: Running task 120.0 in stage 5.0 (TID 129)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:52 INFO Executor: Finished task 120.0 in stage 5.0 (TID 129). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 131
+20/01/22 21:38:52 INFO Executor: Running task 122.0 in stage 5.0 (TID 131)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:52 INFO Executor: Finished task 122.0 in stage 5.0 (TID 131). 5399 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 133
+20/01/22 21:38:52 INFO Executor: Running task 124.0 in stage 5.0 (TID 133)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:52 INFO Executor: Finished task 124.0 in stage 5.0 (TID 133). 5356 bytes result sent to driver
+20/01/22 21:38:52 INFO CoarseGrainedExecutorBackend: Got assigned task 135
+20/01/22 21:38:52 INFO Executor: Running task 126.0 in stage 5.0 (TID 135)
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:52 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 126.0 in stage 5.0 (TID 135). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 137
+20/01/22 21:38:53 INFO Executor: Running task 128.0 in stage 5.0 (TID 137)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:53 INFO Executor: Finished task 128.0 in stage 5.0 (TID 137). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 139
+20/01/22 21:38:53 INFO Executor: Running task 130.0 in stage 5.0 (TID 139)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 6 ms
+20/01/22 21:38:53 INFO Executor: Finished task 130.0 in stage 5.0 (TID 139). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 142
+20/01/22 21:38:53 INFO Executor: Running task 133.0 in stage 5.0 (TID 142)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:53 INFO Executor: Finished task 133.0 in stage 5.0 (TID 142). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 144
+20/01/22 21:38:53 INFO Executor: Running task 135.0 in stage 5.0 (TID 144)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:53 INFO Executor: Finished task 135.0 in stage 5.0 (TID 144). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 145
+20/01/22 21:38:53 INFO Executor: Running task 136.0 in stage 5.0 (TID 145)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 136.0 in stage 5.0 (TID 145). 5399 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 147
+20/01/22 21:38:53 INFO Executor: Running task 138.0 in stage 5.0 (TID 147)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:53 INFO Executor: Finished task 138.0 in stage 5.0 (TID 147). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 149
+20/01/22 21:38:53 INFO Executor: Running task 140.0 in stage 5.0 (TID 149)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:53 INFO Executor: Finished task 140.0 in stage 5.0 (TID 149). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 151
+20/01/22 21:38:53 INFO Executor: Running task 142.0 in stage 5.0 (TID 151)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:53 INFO Executor: Finished task 142.0 in stage 5.0 (TID 151). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 153
+20/01/22 21:38:53 INFO Executor: Running task 144.0 in stage 5.0 (TID 153)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 144.0 in stage 5.0 (TID 153). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 155
+20/01/22 21:38:53 INFO Executor: Running task 146.0 in stage 5.0 (TID 155)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:53 INFO Executor: Finished task 146.0 in stage 5.0 (TID 155). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 157
+20/01/22 21:38:53 INFO Executor: Running task 148.0 in stage 5.0 (TID 157)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 148.0 in stage 5.0 (TID 157). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 158
+20/01/22 21:38:53 INFO Executor: Running task 149.0 in stage 5.0 (TID 158)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 149.0 in stage 5.0 (TID 158). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 160
+20/01/22 21:38:53 INFO Executor: Running task 151.0 in stage 5.0 (TID 160)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:53 INFO Executor: Finished task 151.0 in stage 5.0 (TID 160). 5399 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 162
+20/01/22 21:38:53 INFO Executor: Running task 153.0 in stage 5.0 (TID 162)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 153.0 in stage 5.0 (TID 162). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 164
+20/01/22 21:38:53 INFO Executor: Running task 155.0 in stage 5.0 (TID 164)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 155.0 in stage 5.0 (TID 164). 5399 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 166
+20/01/22 21:38:53 INFO Executor: Running task 157.0 in stage 5.0 (TID 166)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 157.0 in stage 5.0 (TID 166). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 168
+20/01/22 21:38:53 INFO Executor: Running task 159.0 in stage 5.0 (TID 168)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 159.0 in stage 5.0 (TID 168). 5399 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 170
+20/01/22 21:38:53 INFO Executor: Running task 161.0 in stage 5.0 (TID 170)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:53 INFO Executor: Finished task 161.0 in stage 5.0 (TID 170). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 173
+20/01/22 21:38:53 INFO Executor: Running task 164.0 in stage 5.0 (TID 173)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:53 INFO Executor: Finished task 164.0 in stage 5.0 (TID 173). 5356 bytes result sent to driver
+20/01/22 21:38:53 INFO CoarseGrainedExecutorBackend: Got assigned task 175
+20/01/22 21:38:53 INFO Executor: Running task 166.0 in stage 5.0 (TID 175)
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:53 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:54 INFO Executor: Finished task 166.0 in stage 5.0 (TID 175). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 177
+20/01/22 21:38:54 INFO Executor: Running task 168.0 in stage 5.0 (TID 177)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:54 INFO Executor: Finished task 168.0 in stage 5.0 (TID 177). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 179
+20/01/22 21:38:54 INFO Executor: Running task 170.0 in stage 5.0 (TID 179)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 170.0 in stage 5.0 (TID 179). 5399 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 181
+20/01/22 21:38:54 INFO Executor: Running task 172.0 in stage 5.0 (TID 181)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:54 INFO Executor: Finished task 172.0 in stage 5.0 (TID 181). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 183
+20/01/22 21:38:54 INFO Executor: Running task 174.0 in stage 5.0 (TID 183)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:54 INFO Executor: Finished task 174.0 in stage 5.0 (TID 183). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 186
+20/01/22 21:38:54 INFO Executor: Running task 177.0 in stage 5.0 (TID 186)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:54 INFO Executor: Finished task 177.0 in stage 5.0 (TID 186). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 188
+20/01/22 21:38:54 INFO Executor: Running task 179.0 in stage 5.0 (TID 188)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:54 INFO Executor: Finished task 179.0 in stage 5.0 (TID 188). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 190
+20/01/22 21:38:54 INFO Executor: Running task 181.0 in stage 5.0 (TID 190)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 181.0 in stage 5.0 (TID 190). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 192
+20/01/22 21:38:54 INFO Executor: Running task 183.0 in stage 5.0 (TID 192)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 4 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 183.0 in stage 5.0 (TID 192). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 194
+20/01/22 21:38:54 INFO Executor: Running task 185.0 in stage 5.0 (TID 194)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 185.0 in stage 5.0 (TID 194). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 196
+20/01/22 21:38:54 INFO Executor: Running task 187.0 in stage 5.0 (TID 196)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 2 ms
+20/01/22 21:38:54 INFO Executor: Finished task 187.0 in stage 5.0 (TID 196). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 198
+20/01/22 21:38:54 INFO Executor: Running task 189.0 in stage 5.0 (TID 198)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 189.0 in stage 5.0 (TID 198). 5399 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 200
+20/01/22 21:38:54 INFO Executor: Running task 191.0 in stage 5.0 (TID 200)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:54 INFO Executor: Finished task 191.0 in stage 5.0 (TID 200). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 202
+20/01/22 21:38:54 INFO Executor: Running task 193.0 in stage 5.0 (TID 202)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 1 ms
+20/01/22 21:38:54 INFO Executor: Finished task 193.0 in stage 5.0 (TID 202). 5399 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 203
+20/01/22 21:38:54 INFO Executor: Running task 194.0 in stage 5.0 (TID 203)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 194.0 in stage 5.0 (TID 203). 5356 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 205
+20/01/22 21:38:54 INFO Executor: Running task 196.0 in stage 5.0 (TID 205)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 3 ms
+20/01/22 21:38:54 INFO Executor: Finished task 196.0 in stage 5.0 (TID 205). 5399 bytes result sent to driver
+20/01/22 21:38:54 INFO CoarseGrainedExecutorBackend: Got assigned task 207
+20/01/22 21:38:54 INFO Executor: Running task 198.0 in stage 5.0 (TID 207)
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 0 non-empty blocks including 0 local blocks and 0 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks including 0 local blocks and 2 remote blocks
+20/01/22 21:38:54 INFO ShuffleBlockFetcherIterator: Started 1 remote fetches in 0 ms
+20/01/22 21:38:54 INFO Executor: Finished task 198.0 in stage 5.0 (TID 207). 5356 bytes result sent to driver
+20/01/22 21:38:55 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/01/22 21:38:55 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

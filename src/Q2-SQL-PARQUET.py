@@ -37,23 +37,13 @@ if __name__ == "__main__":
     spark = SparkSession.builder.appName("Q2-SQL-PARQUET").getOrCreate()
 
     trips = spark.read.parquet("hdfs://master:9000/yellow_tripdata_1m.parquet")
+    vendors = spark.read.parquet("hdfs://master:9000/yellow_tripvendors_1m.parquet")
 
     speedUdf = udf(calculate_speed, DoubleType())
     trips = trips.filter("cast(StartDate as DATE) > cast('2015-03-10' as DATE)"). \
             withColumn("Speed", speedUdf("StartDate", "FinishDate", "StartLongitude",
                              "StartLatitude", "FinishLongitude", "FinishLatitude")). \
-            select("TripID", "Speed").orderBy("Speed", ascending=False).limit(5)
-    trips.createOrReplaceTempView("trips")
-
-    vendors = spark.read.parquet("hdfs://master:9000/yellow_tripvendors_1m.parquet")
-    vendors.createOrReplaceTempView("vendors")
-
-    result = spark.sql("SELECT trips.TripID, Speed, vendors.VendorID \
-                        FROM trips \
-                        LEFT JOIN vendors \
-                        ON trips.TripID = vendors.TripID \
-                        ORDER BY Speed DESC")
-
-    result.write.format("csv").mode("overwrite").options(delimiter='\t').save("hdfs://master:9000/Q2-SQL-PARQUET-out")
-    result.show()
+            select("TripID", "Speed").orderBy("Speed", ascending=False).limit(5). \
+            join(vendors, "TripID", "left").orderBy("Speed", ascending=False)
+    trips.show()
     spark.stop()

@@ -1,5 +1,0 @@
-#
-# There is insufficient memory for the Java Runtime Environment to continue.
-# Native memory allocation (mmap) failed to map 1572864 bytes for committing reserved memory.
-# An error report file with more information is saved as:
-# /home/user/spark-2.4.4-bin-hadoop2.7/work/app-20200122211130-0001/1/hs_err_pid3297.log
