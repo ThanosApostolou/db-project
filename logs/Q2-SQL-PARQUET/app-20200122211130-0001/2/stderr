@@ -1,0 +1,70 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/home/user/spark-2.4.4-bin-hadoop2.7/conf/:/home/user/spark-2.4.4-bin-hadoop2.7/jars/*" "-Xmx512M" "-Dspark.driver.port=46806" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@master:46806" "--executor-id" "2" "--hostname" "192.168.0.2" "--cores" "1" "--app-id" "app-20200122211130-0001" "--worker-url" "spark://Worker@192.168.0.2:41553"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/01/22 21:16:12 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 3531@slave
+20/01/22 21:16:12 INFO SignalUtils: Registered signal handler for TERM
+20/01/22 21:16:12 INFO SignalUtils: Registered signal handler for HUP
+20/01/22 21:16:12 INFO SignalUtils: Registered signal handler for INT
+20/01/22 21:16:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/01/22 21:16:14 INFO SecurityManager: Changing view acls to: user
+20/01/22 21:16:14 INFO SecurityManager: Changing modify acls to: user
+20/01/22 21:16:14 INFO SecurityManager: Changing view acls groups to: 
+20/01/22 21:16:14 INFO SecurityManager: Changing modify acls groups to: 
+20/01/22 21:16:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/22 21:16:15 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:46806 after 147 ms (0 ms spent in bootstraps)
+20/01/22 21:16:15 INFO SecurityManager: Changing view acls to: user
+20/01/22 21:16:15 INFO SecurityManager: Changing modify acls to: user
+20/01/22 21:16:15 INFO SecurityManager: Changing view acls groups to: 
+20/01/22 21:16:15 INFO SecurityManager: Changing modify acls groups to: 
+20/01/22 21:16:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/22 21:16:15 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:46806 after 4 ms (0 ms spent in bootstraps)
+20/01/22 21:16:15 INFO DiskBlockManager: Created local directory at /tmp/spark-7012dd7e-2a36-4811-a74e-2fcdd733c44d/executor-28f3e50d-35ff-44ee-a818-479766a666f6/blockmgr-e6c339b0-72a7-4a4b-97cf-7cba7cee114d
+20/01/22 21:16:15 INFO MemoryStore: MemoryStore started with capacity 93.3 MB
+20/01/22 21:16:16 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master:46806
+20/01/22 21:16:16 INFO WorkerWatcher: Connecting to worker spark://Worker@192.168.0.2:41553
+20/01/22 21:16:16 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:41553 after 22 ms (0 ms spent in bootstraps)
+20/01/22 21:16:16 INFO WorkerWatcher: Successfully connected to spark://Worker@192.168.0.2:41553
+20/01/22 21:16:16 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/01/22 21:16:16 INFO Executor: Starting executor ID 2 on host 192.168.0.2
+20/01/22 21:16:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44261.
+20/01/22 21:16:16 INFO NettyBlockTransferService: Server created on 192.168.0.2:44261
+20/01/22 21:16:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/01/22 21:16:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(2, 192.168.0.2, 44261, None)
+20/01/22 21:16:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(2, 192.168.0.2, 44261, None)
+20/01/22 21:16:16 INFO BlockManager: Initialized BlockManager: BlockManagerId(2, 192.168.0.2, 44261, None)
+20/01/22 21:16:16 INFO CoarseGrainedExecutorBackend: Got assigned task 416
+20/01/22 21:16:16 INFO Executor: Running task 0.1 in stage 11.0 (TID 416)
+20/01/22 21:16:16 INFO MapOutputTrackerWorker: Updating epoch to 4 and clearing cache
+20/01/22 21:16:16 INFO TorrentBroadcast: Started reading broadcast variable 12
+20/01/22 21:16:17 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:43492 after 14 ms (0 ms spent in bootstraps)
+20/01/22 21:16:17 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 11.7 KB, free 93.3 MB)
+20/01/22 21:16:17 INFO TorrentBroadcast: Reading broadcast variable 12 took 184 ms
+20/01/22 21:16:17 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 26.2 KB, free 93.3 MB)
+20/01/22 21:16:18 INFO CodeGenerator: Code generated in 529.677055 ms
+20/01/22 21:16:18 INFO CodeGenerator: Code generated in 127.021265 ms
+20/01/22 21:16:19 INFO CodeGenerator: Code generated in 34.832834 ms
+20/01/22 21:16:19 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00001-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28756588, partition values: [empty row]
+20/01/22 21:16:19 INFO TorrentBroadcast: Started reading broadcast variable 10
+20/01/22 21:16:19 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 24.3 KB, free 93.2 MB)
+20/01/22 21:16:19 INFO TorrentBroadcast: Reading broadcast variable 10 took 16 ms
+20/01/22 21:16:19 INFO CodeGenerator: Code generated in 44.626339 ms
+20/01/22 21:16:19 INFO CodeGenerator: Code generated in 24.32046 ms
+20/01/22 21:16:20 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 331.8 KB, free 92.9 MB)
+20/01/22 21:16:22 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:22 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:22 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:22 INFO CodecPool: Got brand-new decompressor [.snappy]
+20/01/22 21:16:33 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00002-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28677886, partition values: [empty row]
+20/01/22 21:16:33 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:33 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:33 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:37 INFO TaskMemoryManager: Memory used in task 416
+20/01/22 21:16:37 INFO TaskMemoryManager: Acquired by HybridRowQueue(org.apache.spark.memory.TaskMemoryManager@150b7fb8,/tmp/spark-7012dd7e-2a36-4811-a74e-2fcdd733c44d/executor-28f3e50d-35ff-44ee-a818-479766a666f6/spark-39043c36-55ee-44b0-9650-cd3fc827f9cb,7,org.apache.spark.serializer.SerializerManager@3c697a51): 92.9 MB
+20/01/22 21:16:37 INFO TaskMemoryManager: 0 bytes of memory were used by task 416 but are not associated with specific consumers
+20/01/22 21:16:37 INFO TaskMemoryManager: 97428757 bytes of memory are used for execution and 403383 bytes of memory are used for storage
+20/01/22 21:16:46 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.parquet/part-00011-359368f2-e1ed-40ea-a55e-415129271431-c000.snappy.parquet, range: 0-28592467, partition values: [empty row]
+20/01/22 21:16:46 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:46 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+20/01/22 21:16:46 INFO FilterCompat: Filtering using predicate: noteq(StartDate, null)
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000ffd00000, 3145728, 0) failed; error='Cannot allocate memory' (errno=12)
