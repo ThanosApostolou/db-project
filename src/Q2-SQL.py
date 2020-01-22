@@ -47,31 +47,18 @@ if __name__ == "__main__":
         StructField("Cost", StringType(), True)
     ])
     trips = spark.read.schema(tschema).csv("hdfs://master:9000/yellow_tripdata_1m.csv")
-
-    speedUdf = udf(calculate_speed, DoubleType())
-    trips = trips.withColumn("Speed", speedUdf("StartDate", "FinishDate", "StartLongitude",
-                             "StartLatitude", "FinishLongitude", "FinishLatitude"))
-    trips.createOrReplaceTempView("trips")
-    trips = spark.sql("SELECT TripID, Speed \
-                      FROM trips \
-                      WHERE cast(StartDate as DATE) > cast('2015-03-10' as DATE) \
-                      ORDER BY Speed DESC \
-                      LIMIT 5")
-    trips.createOrReplaceTempView("trips")
-
     vschema = StructType([
         StructField("TripID", StringType(), False),
         StructField("VendorID", StringType(), True)
     ])
     vendors = spark.read.schema(vschema).csv("hdfs://master:9000/yellow_tripvendors_1m.csv")
-    vendors.createOrReplaceTempView("vendors")
 
-    result = spark.sql("SELECT trips.TripID, Speed, vendors.VendorID \
-                        FROM trips \
-                        LEFT JOIN vendors \
-                        ON trips.TripID = vendors.TripID \
-                        ORDER BY Speed DESC")
-
-    result.write.format("csv").mode("overwrite").options(delimiter='\t').save("hdfs://master:9000/Q2-SQL-out")
-    result.show()
+    speedUdf = udf(calculate_speed, DoubleType())
+    trips = trips.filter("cast(StartDate as DATE) > cast('2015-03-10' as DATE)"). \
+            withColumn("Speed", speedUdf("StartDate", "FinishDate", "StartLongitude",
+                             "StartLatitude", "FinishLongitude", "FinishLatitude")). \
+            select("TripID", "Speed").orderBy("Speed", ascending=False).limit(5). \
+            join(vendors, "TripID", "left").orderBy("Speed", ascending=False)
+    trips.write.format("csv").mode("overwrite").options(delimiter='\t').save("hdfs://master:9000/Q2-SQL-out")
+    trips.show()
     spark.stop()

@@ -15,8 +15,11 @@ elif [ "$1" = "2a" ]; then
 elif [ "$1" = "2b" ]; then
     time spark-submit ./src/Q2-SQL.py
 elif [ "$1" = "2c" ]; then
+    hdfs dfs -rm -r /Q2-SQL-PARQUET-out
     time spark-submit ./src/Q2-SQL-PARQUET.py
 elif [ "$1" = "parquet" ]; then
+    hdfs dfs -rm -r /yellow_tripdata_1m.parquet
+    hdfs dfs -rm -r /yellow_tripvendors_1m.parquet
     time spark-submit ./src/parquet.py
 else
     echo "Usage: run.sh {1a,1b,1c,2a,2b,2c,parquet}"
