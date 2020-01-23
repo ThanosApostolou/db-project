@@ -1,2 +1,4 @@
-*.csv
+tripdata-min.csv
+yellow_tripdata_1m.csv
+yellow_tripvendors_1m.csv
 .~lock*
