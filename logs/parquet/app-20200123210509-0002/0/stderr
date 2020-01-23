@@ -1,0 +1,1283 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/home/user/spark-2.4.4-bin-hadoop2.7/conf/:/home/user/spark-2.4.4-bin-hadoop2.7/jars/*" "-Xmx768M" "-Dspark.driver.port=40212" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@master:40212" "--executor-id" "0" "--hostname" "192.168.0.2" "--cores" "1" "--app-id" "app-20200123210509-0002" "--worker-url" "spark://Worker@192.168.0.2:33963"
+========================================
+
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/01/23 21:05:13 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 20270@slave
+20/01/23 21:05:13 INFO SignalUtils: Registered signal handler for TERM
+20/01/23 21:05:13 INFO SignalUtils: Registered signal handler for HUP
+20/01/23 21:05:13 INFO SignalUtils: Registered signal handler for INT
+20/01/23 21:05:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/01/23 21:05:15 INFO SecurityManager: Changing view acls to: user
+20/01/23 21:05:15 INFO SecurityManager: Changing modify acls to: user
+20/01/23 21:05:15 INFO SecurityManager: Changing view acls groups to: 
+20/01/23 21:05:15 INFO SecurityManager: Changing modify acls groups to: 
+20/01/23 21:05:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/23 21:05:16 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:40212 after 190 ms (0 ms spent in bootstraps)
+20/01/23 21:05:16 INFO SecurityManager: Changing view acls to: user
+20/01/23 21:05:16 INFO SecurityManager: Changing modify acls to: user
+20/01/23 21:05:16 INFO SecurityManager: Changing view acls groups to: 
+20/01/23 21:05:16 INFO SecurityManager: Changing modify acls groups to: 
+20/01/23 21:05:16 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+20/01/23 21:05:16 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:40212 after 5 ms (0 ms spent in bootstraps)
+20/01/23 21:05:16 INFO DiskBlockManager: Created local directory at /tmp/spark-8943cf63-6bed-434c-bf85-ee5b3d862bbb/executor-c8f58c60-c2e0-46ba-9883-b84d4e092b63/blockmgr-b24ec4e0-56ec-462f-9731-e26affe189ad
+20/01/23 21:05:17 INFO MemoryStore: MemoryStore started with capacity 229.8 MB
+20/01/23 21:05:17 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@master:40212
+20/01/23 21:05:17 INFO WorkerWatcher: Connecting to worker spark://Worker@192.168.0.2:33963
+20/01/23 21:05:17 INFO TransportClientFactory: Successfully created connection to /192.168.0.2:33963 after 17 ms (0 ms spent in bootstraps)
+20/01/23 21:05:17 INFO WorkerWatcher: Successfully connected to spark://Worker@192.168.0.2:33963
+20/01/23 21:05:17 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+20/01/23 21:05:17 INFO Executor: Starting executor ID 0 on host 192.168.0.2
+20/01/23 21:05:17 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37110.
+20/01/23 21:05:17 INFO NettyBlockTransferService: Server created on 192.168.0.2:37110
+20/01/23 21:05:17 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/01/23 21:05:17 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 192.168.0.2, 37110, None)
+20/01/23 21:05:17 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 192.168.0.2, 37110, None)
+20/01/23 21:05:17 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 192.168.0.2, 37110, None)
+20/01/23 21:05:20 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+20/01/23 21:05:20 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/01/23 21:05:20 INFO TorrentBroadcast: Started reading broadcast variable 1
+20/01/23 21:05:20 INFO TransportClientFactory: Successfully created connection to master/192.168.0.1:39681 after 4 ms (0 ms spent in bootstraps)
+20/01/23 21:05:20 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 55.3 KB, free 229.7 MB)
+20/01/23 21:05:20 INFO TorrentBroadcast: Reading broadcast variable 1 took 244 ms
+20/01/23 21:05:21 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 151.2 KB, free 229.6 MB)
+20/01/23 21:05:22 INFO CodeGenerator: Code generated in 343.542704 ms
+20/01/23 21:05:22 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:24 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:24 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:24 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:24 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:24 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:24 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:05:24 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:05:24 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:05:24 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:05:24 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:05:24 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:05:24 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:05:24 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:05:24 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:05:24 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:05:24 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:05:24 INFO CodecPool: Got brand-new compressor [.snappy]
+20/01/23 21:05:25 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 0-134217728, partition values: [empty row]
+20/01/23 21:05:25 INFO CodeGenerator: Code generated in 90.013682 ms
+20/01/23 21:05:25 INFO TorrentBroadcast: Started reading broadcast variable 0
+20/01/23 21:05:25 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.5 KB, free 229.6 MB)
+20/01/23 21:05:25 INFO TorrentBroadcast: Reading broadcast variable 0 took 28 ms
+20/01/23 21:05:25 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 328.5 KB, free 229.3 MB)
+20/01/23 21:05:34 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 31352398
+20/01/23 21:05:34 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000000_0' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000000
+20/01/23 21:05:34 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000000_0: Committed
+20/01/23 21:05:34 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2245 bytes result sent to driver
+20/01/23 21:05:34 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+20/01/23 21:05:34 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+20/01/23 21:05:34 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:34 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:34 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:34 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:34 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 134217728-268435456, partition values: [empty row]
+20/01/23 21:05:34 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:34 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:34 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:05:34 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:05:34 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:05:34 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:05:34 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:05:34 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:05:34 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:05:34 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:05:34 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:05:34 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:05:34 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:05:42 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 32051792
+20/01/23 21:05:42 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000001_1' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000001
+20/01/23 21:05:42 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000001_1: Committed
+20/01/23 21:05:42 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2202 bytes result sent to driver
+20/01/23 21:05:42 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+20/01/23 21:05:42 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+20/01/23 21:05:42 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:42 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:42 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:42 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:42 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 268435456-402653184, partition values: [empty row]
+20/01/23 21:05:42 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:42 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:42 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:05:42 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:05:42 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:05:42 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:05:42 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:05:42 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:05:42 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:05:42 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:05:42 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:05:42 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:05:42 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:05:49 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 32015518
+20/01/23 21:05:49 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000002_2' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000002
+20/01/23 21:05:49 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000002_2: Committed
+20/01/23 21:05:49 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2245 bytes result sent to driver
+20/01/23 21:05:49 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+20/01/23 21:05:49 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+20/01/23 21:05:49 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:49 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:49 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:49 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:49 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 402653184-536870912, partition values: [empty row]
+20/01/23 21:05:49 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:49 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:49 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:05:49 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:05:49 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:05:49 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:05:49 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:05:49 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:05:49 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:05:49 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:05:49 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:05:49 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:05:49 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:05:57 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30785283
+20/01/23 21:05:58 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000003_3' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000003
+20/01/23 21:05:58 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000003_3: Committed
+20/01/23 21:05:58 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2245 bytes result sent to driver
+20/01/23 21:05:58 INFO CoarseGrainedExecutorBackend: Got assigned task 4
+20/01/23 21:05:58 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+20/01/23 21:05:58 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:58 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:58 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:05:58 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:05:58 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 536870912-671088640, partition values: [empty row]
+20/01/23 21:05:58 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:58 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:05:58 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:05:58 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:05:58 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:05:58 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:05:58 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:05:58 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:05:58 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:05:58 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:05:58 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:05:58 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:05:58 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:05 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 29831123
+20/01/23 21:06:05 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000004_4' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000004
+20/01/23 21:06:05 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000004_4: Committed
+20/01/23 21:06:05 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2202 bytes result sent to driver
+20/01/23 21:06:05 INFO CoarseGrainedExecutorBackend: Got assigned task 5
+20/01/23 21:06:05 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+20/01/23 21:06:05 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:05 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:05 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:05 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:05 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 671088640-805306368, partition values: [empty row]
+20/01/23 21:06:05 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:05 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:05 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:05 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:05 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:05 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:05 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:05 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:05 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:05 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:05 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:05 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:05 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:11 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 28803390
+20/01/23 21:06:12 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000005_5' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000005
+20/01/23 21:06:12 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000005_5: Committed
+20/01/23 21:06:12 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2202 bytes result sent to driver
+20/01/23 21:06:12 INFO CoarseGrainedExecutorBackend: Got assigned task 6
+20/01/23 21:06:12 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+20/01/23 21:06:12 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:12 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:12 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:12 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:12 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 805306368-939524096, partition values: [empty row]
+20/01/23 21:06:12 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:12 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:12 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:12 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:12 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:12 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:12 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:12 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:12 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:12 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:12 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:12 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:12 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:19 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 29980312
+20/01/23 21:06:19 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000006_6' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000006
+20/01/23 21:06:19 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000006_6: Committed
+20/01/23 21:06:19 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2202 bytes result sent to driver
+20/01/23 21:06:19 INFO CoarseGrainedExecutorBackend: Got assigned task 7
+20/01/23 21:06:19 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+20/01/23 21:06:19 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:19 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:19 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:19 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:19 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 939524096-1073741824, partition values: [empty row]
+20/01/23 21:06:19 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:19 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:19 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:19 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:19 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:19 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:19 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:19 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:19 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:19 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:19 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:19 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:19 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:26 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30461445
+20/01/23 21:06:26 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000007_7' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000007
+20/01/23 21:06:26 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000007_7: Committed
+20/01/23 21:06:26 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2202 bytes result sent to driver
+20/01/23 21:06:26 INFO CoarseGrainedExecutorBackend: Got assigned task 8
+20/01/23 21:06:26 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+20/01/23 21:06:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:26 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:26 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:26 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:26 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 1073741824-1207959552, partition values: [empty row]
+20/01/23 21:06:26 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:26 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:26 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:26 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:26 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:26 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:26 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:26 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:26 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:26 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:26 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:26 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:26 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:33 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30034785
+20/01/23 21:06:33 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000008_8' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000008
+20/01/23 21:06:33 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000008_8: Committed
+20/01/23 21:06:33 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 2202 bytes result sent to driver
+20/01/23 21:06:33 INFO CoarseGrainedExecutorBackend: Got assigned task 9
+20/01/23 21:06:33 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+20/01/23 21:06:33 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:33 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:33 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:33 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:33 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 1207959552-1342177280, partition values: [empty row]
+20/01/23 21:06:33 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:33 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:33 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:33 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:33 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:33 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:33 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:33 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:33 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:33 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:33 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:33 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:33 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:40 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30470180
+20/01/23 21:06:41 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000009_9' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000009
+20/01/23 21:06:41 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000009_9: Committed
+20/01/23 21:06:41 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 2202 bytes result sent to driver
+20/01/23 21:06:41 INFO CoarseGrainedExecutorBackend: Got assigned task 10
+20/01/23 21:06:41 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+20/01/23 21:06:41 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:41 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:41 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:41 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:41 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 1342177280-1476395008, partition values: [empty row]
+20/01/23 21:06:41 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:41 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:41 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:41 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:41 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:41 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:41 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:41 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:41 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:41 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:41 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:41 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:41 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:47 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30528630
+20/01/23 21:06:48 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000010_10' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000010
+20/01/23 21:06:48 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000010_10: Committed
+20/01/23 21:06:48 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 2202 bytes result sent to driver
+20/01/23 21:06:48 INFO CoarseGrainedExecutorBackend: Got assigned task 11
+20/01/23 21:06:48 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+20/01/23 21:06:48 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:48 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:48 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:48 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:48 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 1476395008-1610612736, partition values: [empty row]
+20/01/23 21:06:48 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:48 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:48 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:48 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:48 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:48 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:48 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:48 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:48 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:48 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:48 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:48 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:48 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:06:55 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30245178
+20/01/23 21:06:55 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000011_11' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000011
+20/01/23 21:06:55 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000011_11: Committed
+20/01/23 21:06:55 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 2202 bytes result sent to driver
+20/01/23 21:06:55 INFO CoarseGrainedExecutorBackend: Got assigned task 12
+20/01/23 21:06:55 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+20/01/23 21:06:55 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:55 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:55 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:06:55 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:06:55 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 1610612736-1744830464, partition values: [empty row]
+20/01/23 21:06:55 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:55 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:06:55 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:06:55 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:06:55 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:06:55 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:06:55 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:06:55 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:06:55 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:06:55 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:06:55 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:06:55 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:06:55 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:07:01 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 30314964
+20/01/23 21:07:01 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000012_12' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000012
+20/01/23 21:07:01 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000012_12: Committed
+20/01/23 21:07:01 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 2245 bytes result sent to driver
+20/01/23 21:07:01 INFO CoarseGrainedExecutorBackend: Got assigned task 13
+20/01/23 21:07:01 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+20/01/23 21:07:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:07:01 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:07:01 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:07:01 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:07:01 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripdata_1m.csv, range: 1744830464-1787503601, partition values: [empty row]
+20/01/23 21:07:01 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:07:01 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:07:01 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:07:01 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:07:01 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:07:01 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:07:01 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:07:01 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:07:01 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:07:01 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:07:01 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:07:01 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:07:01 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishDate",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "StartLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLongitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "FinishLatitude",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "Cost",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary StartDate (UTF8);
+  optional binary FinishDate (UTF8);
+  optional binary StartLongitude (UTF8);
+  optional binary StartLatitude (UTF8);
+  optional binary FinishLongitude (UTF8);
+  optional binary FinishLatitude (UTF8);
+  optional binary Cost (UTF8);
+}
+
+       
+20/01/23 21:07:04 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 11634116
+20/01/23 21:07:04 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210519_0000_m_000013_13' to hdfs://master:9000/yellow_tripdata_1m.parquet/_temporary/0/task_20200123210519_0000_m_000013
+20/01/23 21:07:04 INFO SparkHadoopMapRedUtil: attempt_20200123210519_0000_m_000013_13: Committed
+20/01/23 21:07:04 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 2202 bytes result sent to driver
+20/01/23 21:07:05 INFO CoarseGrainedExecutorBackend: Got assigned task 14
+20/01/23 21:07:05 INFO Executor: Running task 0.0 in stage 1.0 (TID 14)
+20/01/23 21:07:05 INFO TorrentBroadcast: Started reading broadcast variable 3
+20/01/23 21:07:05 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 54.9 KB, free 229.4 MB)
+20/01/23 21:07:05 INFO TorrentBroadcast: Reading broadcast variable 3 took 17 ms
+20/01/23 21:07:05 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 149.8 KB, free 229.3 MB)
+20/01/23 21:07:05 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:07:05 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:07:05 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:07:05 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:07:05 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:07:05 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:07:05 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:07:05 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:07:05 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:07:05 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:07:05 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:07:05 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:07:05 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:07:05 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:07:05 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:07:05 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:07:05 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "VendorID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary VendorID (UTF8);
+}
+
+       
+20/01/23 21:07:05 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripvendors_1m.csv, range: 0-102169284, partition values: [empty row]
+20/01/23 21:07:05 INFO CodeGenerator: Code generated in 17.099453 ms
+20/01/23 21:07:05 INFO TorrentBroadcast: Started reading broadcast variable 2
+20/01/23 21:07:05 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.5 KB, free 229.2 MB)
+20/01/23 21:07:05 INFO TorrentBroadcast: Reading broadcast variable 2 took 19 ms
+20/01/23 21:07:05 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 328.5 KB, free 228.9 MB)
+20/01/23 21:07:16 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 35632279
+20/01/23 21:07:16 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210705_0001_m_000000_14' to hdfs://master:9000/yellow_tripvendors_1m.parquet/_temporary/0/task_20200123210705_0001_m_000000
+20/01/23 21:07:16 INFO SparkHadoopMapRedUtil: attempt_20200123210705_0001_m_000000_14: Committed
+20/01/23 21:07:16 INFO Executor: Finished task 0.0 in stage 1.0 (TID 14). 2202 bytes result sent to driver
+20/01/23 21:07:16 INFO CoarseGrainedExecutorBackend: Got assigned task 15
+20/01/23 21:07:16 INFO Executor: Running task 1.0 in stage 1.0 (TID 15)
+20/01/23 21:07:17 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:07:17 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:07:17 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/01/23 21:07:17 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/01/23 21:07:17 INFO FileScanRDD: Reading File path: hdfs://master:9000/yellow_tripvendors_1m.csv, range: 102169284-200144265, partition values: [empty row]
+20/01/23 21:07:17 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:07:17 INFO CodecConfig: Compression: SNAPPY
+20/01/23 21:07:17 INFO ParquetOutputFormat: Parquet block size to 134217728
+20/01/23 21:07:17 INFO ParquetOutputFormat: Parquet page size to 1048576
+20/01/23 21:07:17 INFO ParquetOutputFormat: Parquet dictionary page size to 1048576
+20/01/23 21:07:17 INFO ParquetOutputFormat: Dictionary is on
+20/01/23 21:07:17 INFO ParquetOutputFormat: Validation is off
+20/01/23 21:07:17 INFO ParquetOutputFormat: Writer version is: PARQUET_1_0
+20/01/23 21:07:17 INFO ParquetOutputFormat: Maximum row group padding size is 8388608 bytes
+20/01/23 21:07:17 INFO ParquetOutputFormat: Page size checking is: estimated
+20/01/23 21:07:17 INFO ParquetOutputFormat: Min row count for page size check is: 100
+20/01/23 21:07:17 INFO ParquetOutputFormat: Max row count for page size check is: 10000
+20/01/23 21:07:17 INFO ParquetWriteSupport: Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "TripID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "VendorID",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary TripID (UTF8);
+  optional binary VendorID (UTF8);
+}
+
+       
+20/01/23 21:07:27 INFO InternalParquetRecordWriter: Flushing mem columnStore to file. allocated memory: 33658922
+20/01/23 21:07:28 INFO FileOutputCommitter: Saved output of task 'attempt_20200123210705_0001_m_000001_15' to hdfs://master:9000/yellow_tripvendors_1m.parquet/_temporary/0/task_20200123210705_0001_m_000001
+20/01/23 21:07:28 INFO SparkHadoopMapRedUtil: attempt_20200123210705_0001_m_000001_15: Committed
+20/01/23 21:07:28 INFO Executor: Finished task 1.0 in stage 1.0 (TID 15). 2245 bytes result sent to driver
+20/01/23 21:07:28 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+20/01/23 21:07:28 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

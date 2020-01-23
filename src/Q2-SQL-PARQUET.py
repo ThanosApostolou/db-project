@@ -45,6 +45,6 @@ if __name__ == "__main__":
                              "StartLatitude", "FinishLongitude", "FinishLatitude")). \
             select("TripID", "Speed").orderBy("Speed", ascending=False).limit(5). \
             join(vendors, "TripID", "left").orderBy("Speed", ascending=False)
-    trips.write.mode("overwrite").csv("hdfs://master:9000/Q2-SQL-PARQUET-out")
+    trips.write.format("csv").mode("overwrite").options(delimiter='\t').save("hdfs://master:9000/Q2-SQL-PARQUET-out")
     trips.show()
     spark.stop()
